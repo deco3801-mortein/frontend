@@ -1,0 +1,29 @@
+{
+    "users": [
+        {
+            "id": "1",
+            "username": "gardener",
+            "devices": [
+                {
+                    "id": "1",
+                    "name": "Orange Tree",
+                    "data": {
+                        "sunlight": 25,
+                        "moisture": 80,
+                        "vibration": false
+                    }
+                },
+                {
+                    "id": "2",
+                    "name": "Tomato Plant",
+                    "data": {
+                        "sunlight": 78,
+                        "moisture": 32,
+                        "vibration": true
+                    }
+                }
+
+            ]
+        }
+    ]
+}
