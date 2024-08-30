@@ -1,4 +1,5 @@
 import Meter from "../components/Meter";
+import PropTypes from "prop-types";
 
 // Function for main portion of detail page.
 function Detail(props) {
@@ -31,5 +32,10 @@ function Detail(props) {
         </div>
     );
 }
+
+Detail.propTypes = {
+    plantData: PropTypes.object,
+    toggleVibration: PropTypes.func,
+};
 
 export default Detail;

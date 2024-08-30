@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 // Function for returning Meter component
 // Used in Detail page for displaying Sunlight and Moisture data.
 function Meter(props) {
@@ -30,5 +31,10 @@ function Meter(props) {
         </div>
     );
 }
+
+Meter.propTypes = {
+    type: PropTypes.string,
+    level: PropTypes.number,
+};
 
 export default Meter;
