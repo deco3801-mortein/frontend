@@ -1,22 +1,33 @@
-import { useEffect } from "react";
-import { useState } from "react";
-//import { BrowserRouter, Routes, Route, Navigate } from "react"
+// import React from 'react';
+// import HomePage from './page/HomePage';
+// import './App.css';
+
+// function App() {
+//     return (
+//         <div className="App">
+//             <HomePage />
+//         </div>
+//     );
+// }
+
+// export default App;
+
+import { useEffect, useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Plants from "./pages/Plants";
+import HomePage from "./pages/HomePage";
 import Detail from "./pages/Detail";
 import "./App.css";
+import "./pages/Detail.css";
 
 function App() {
     const [userData, setUserData] = useState(null);
 
-    // Function toggles vibration button and state of userData
-    // Currently does not send anything to API
+    // Function to toggle vibration
     function toggleVibration(event) {
         let newDevices = [];
-        console.log(userData.devices);
         for (let i = 0; i < userData.devices.length; i++) {
             let device = userData.devices[i];
-            console.log(userData.devices[i]);
             if (device.id === event.target.value) {
                 device = {
                     ...device,
@@ -28,33 +39,41 @@ function App() {
             }
             newDevices.push(device);
         }
-        console.log(newDevices);
         setUserData((prevData) => ({
             ...prevData,
             devices: newDevices,
         }));
     }
 
-    // API fetch - does not incrementally fetch
-    // Only fetches once on initial load - need to reload page to
-    // view updates to API.
+    // Fetch API data
     useEffect(() => {
         fetch("http://localhost:3000/users/1")
             .then((response) => response.json())
             .then((data) => {
                 setUserData(data);
-                console.log(data);
             })
             .catch((error) => console.error(error));
     }, []);
 
     return (
-        <main>
-            <Navbar left="Back" title="Detail" />
-            {userData && userData.devices[0] && (
-                <Detail plantData={userData.devices[0]} toggleVibration={toggleVibration} />
-            )}
-        </main>
+        <Router>
+            {/* <Navbar left="Back" title="Detail" /> */}
+            <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route
+                    path="/detail/:id"
+                    element={
+                        userData &&
+                        userData.devices.length > 0 && (
+                            <Detail
+                                plantData={userData.devices[0]}
+                                toggleVibration={toggleVibration}
+                            />
+                        )
+                    }
+                />
+            </Routes>
+        </Router>
     );
 }
 

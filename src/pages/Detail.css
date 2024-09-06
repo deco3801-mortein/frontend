@@ -1,0 +1,97 @@
+/* .character-container {
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    background-color: #e6ffe6; 
+    font-family: 'Pilser';
+    background-image: url('/assets/CBackground.gif');
+    font-family: 'Pilser';
+    background-size: cover;
+    display: inline-block;
+} */
+.navbar {
+    height: 4vh;
+    /* font-size: 3vh; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #bacd92;
+    padding: 1vh;
+    font-family: "PilserBold", sans-serif;
+}
+
+.detail {
+    background-color: #fdfff2;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+}
+
+.plant-main {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    /* gap: 20px; */
+    font-size: 2rem;
+    padding-left: 5vh;
+    padding-top: 7vh;
+    padding-bottom: 8vh;
+    font-family: "PilserBold", sans-serif;
+}
+
+.plant-image {
+    width: 15vh;
+    height: 15vh;
+    border-radius: 50%;
+    border: 1px solid black;
+    margin: 20px;
+}
+
+.plant-health {
+    font-family: "PilserBold", sans-serif;
+    padding-left: 10vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.plant-health-title {
+    margin-bottom: 3vh;
+    font-size: 2rem;
+}
+
+.meter {
+    display: flex;
+    align-items: center;
+    width: 80vw;
+    height: 30px;
+    background-color: white;
+    border-radius: 12px;
+    position: relative;
+    border: 1px solid black;
+}
+
+.level {
+    margin-top: 0;
+    height: 100%;
+    border-radius: 12px;
+    position: absolute;
+}
+
+.sunlight .level {
+    background-color: #ededa7;
+}
+
+.moisture .level {
+    background-color: #b0cce8;
+}
+
+.vibration-button {
+    align-items: center;
+    width: 10vh;
+    height: 5vh;
+    font-size: 1.5rem;
+}
+
+.vibration-heading {
+    font-size: 2rem;
+}

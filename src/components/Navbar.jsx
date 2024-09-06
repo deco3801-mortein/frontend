@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 // Navigation header - used for both detail and plants pages
 // (with different props values)
 function Navbar(props) {
@@ -9,5 +10,10 @@ function Navbar(props) {
         </nav>
     );
 }
+
+Navbar.propTypes = {
+    left: PropTypes.string,
+    title: PropTypes.number,
+};
 
 export default Navbar;
