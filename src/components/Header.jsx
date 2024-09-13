@@ -1,11 +1,14 @@
 import "../components/Header.css";
+import { Link } from "react-router-dom";
 
-const Header = () => {
+const Header = (props) => {
     return (
         <header className="header">
             <div className="menu-icon">&#9776;</div>
-            <h1 className="title">My Plant</h1>
-            <div className="search-icon">&#128269;</div>
+            <h1 className="title">{props.title}</h1>
+            <Link to="/guide">
+                <div className="search-icon">&#128269;</div>
+            </Link>
         </header>
     );
 };
