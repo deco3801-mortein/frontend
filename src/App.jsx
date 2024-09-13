@@ -17,6 +17,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import HomePage from "./pages/HomePage";
 import Detail from "./pages/Detail";
+import Guide from "./pages/Guide";
 import "./App.css";
 import "./pages/Detail.css";
 
@@ -72,6 +73,7 @@ function App() {
                         )
                     }
                 />
+                <Route path="/guide" element={<Guide />} />
             </Routes>
         </Router>
     );
