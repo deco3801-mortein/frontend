@@ -1,0 +1,63 @@
+/* Container for the entire detail page */
+.search-detail-page {
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'PilserLight', sans-serif;
+    background-color: #f8f8f0;
+    text-align: center;
+}
+  
+/* Main section containing the plant image and title */
+.plant-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3vh;
+    gap: 2vw;
+}
+  
+.plant-image {
+    width: 20vh;
+    height: 20vh;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 1vh 2vh rgba(0, 0, 0, 0.1);
+}
+  
+.plant-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #7d9778;
+    font-family: 'PilserBold', sans-serif;
+}
+  
+/* Container for plant information */
+.plant-info {
+    margin-top: 3vh;
+}
+  
+/* Section for individual plant details */
+.info-section {
+    margin-bottom: 3vh;
+    text-align: left;
+}
+  
+/* Info section headers */
+.info-section h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #7d9778;
+    margin-bottom: 1vh;
+    font-family: 'PilserBold', sans-serif;
+}
+  
+/* Info section text */
+.info-section p {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 0;
+    font-family: 'PilserLight', sans-serif;
+}
+  

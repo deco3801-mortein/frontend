@@ -1,0 +1,63 @@
+/* Container for the search input and title */
+.search-container {
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .title h1 {
+    font-size: 2rem;
+    color: #7d9778;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    font-family: 'PilserBold', sans-serif;
+  }
+  
+  /* Wrapper for the search input and icon */
+  .input-wrapper {
+    width: 70vw;
+    height: 4vh;
+    display: flex;
+    align-items: center;
+    margin-left: 15vw;
+    border: 1px solid #7d9778; 
+    border-radius: 1.5vh;
+    box-shadow: 0 1vh 2vh rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Style for the search icon */
+  #search-icon {
+    width: 2vw;
+    height: 2vh;
+    margin-left: 1.5vw;
+    color: #7d9778; 
+  }
+  
+  /* Style for the input box */
+  input {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #7d9778;
+    background-color: transparent; /* Matches the background */
+
+  }
+  
+  /* Placeholder text style */
+  input::placeholder {
+    font-family: 'PilserLight', sans-serif;
+    color: #a0a0a0; /* Light gray for the placeholder */
+  }
+  
+  /* Loading message style */
+  .text-gray-600 {
+    color: #7d9778;
+  }
+  
+  /* Error message styling */
+  .message-none-box {
+    margin-top: 20px;
+    font-size: 16px;
+    color: red;
+  }
+  
+  
