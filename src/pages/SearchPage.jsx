@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { SearchBar } from '../components/SearchBar';
-import Navbar from '../components/Navbar';
-import '../pages/SearchPage.css';
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { SearchBar } from "../components/SearchBar";
+import Navbar from "../components/Navbar";
+import "../pages/SearchPage.css";
 
 const SearchPage = () => {
     const [results, setResults] = useState([]);
@@ -30,14 +30,18 @@ const SearchPage = () => {
             </ul> */}
             <ul className="results-list">
                 {results.map((plant) => (
-                    <li key={plant.id} className="result-item" onClick={() => handlePlantClick(plant.id)}>
+                    <li
+                        key={plant.id}
+                        className="result-item"
+                        onClick={() => handlePlantClick(plant.id)}
+                    >
                         <h2>{plant.common_name}</h2>
                         {plant.default_image && (
-                        <img
-                            src={plant.default_image.thumbnail}
-                            alt={plant.common_name}
-                            className="plant-thumbnail"
-                        />
+                            <img
+                                src={plant.default_image.thumbnail}
+                                alt={plant.common_name}
+                                className="plant-thumbnail"
+                            />
                         )}
                     </li>
                 ))}
