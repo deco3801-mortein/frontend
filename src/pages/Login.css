@@ -13,59 +13,59 @@
     justify-content: center;
     align-items: stretch;
     flex: 1;
-  }
-  
-  .login-title {
+}
+
+.login-title {
     align-self: center;
-  }
-  
-  .left-balancer {
+}
+
+.left-balancer {
     margin-right: auto;
     flex: 0.6;
-  }
-  
-  .slash-container {
+}
+
+.slash-container {
     margin-left: auto;
     flex: 0.4;
     padding-left: 7vw;
-  }
-  
-  .login-slash {
+}
+
+.login-slash {
     border-left: 10vh solid transparent;
     border-bottom: 100vh solid #7ea07f;
-  }
-  
-  .user-login {
+}
+
+.user-login {
     display: flex;
     flex-direction: column;
     margin-top: 70px;
     gap: 70px;
-  }
-  
-  .password-div,
-  .account-div {
+}
+
+.password-div,
+.account-div {
     display: flex;
     justify-content: space-between;
     border-bottom: 0.1rem solid #7ea07f;
     padding: 5px;
-  }
-  
-  input {
+}
+
+input {
     background-color: #fdfff2;
     border: 0;
     width: 100%;
     margin-left: 2px;
-  }
-  
-  .button-div {
+}
+
+.button-div {
     margin-top: 40px;
     text-align: center;
     display: flex;
     justify-content: right;
-  }
-  
-  .login-button {
+}
+
+.login-button {
     text-indent: 0;
     width: 80px;
     height: 40px;
-  }
+}

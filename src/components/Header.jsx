@@ -27,7 +27,7 @@ const Header = () => {
 
     const handleMenuClick = () => {
         navigate("/login"); // Navigate to the login page when the icon is clicked
-    }
+    };
 
     return (
         <header className="header">
