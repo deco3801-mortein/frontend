@@ -21,6 +21,7 @@ import "./App.css";
 import "./pages/Detail.css";
 import SearchPage from "./pages/SearchPage";
 import SearchDetail from "./pages/SearchDetail";
+import Login from "./pages/Login";
 
 function App() {
     const [userData, setUserData] = useState(null);
@@ -62,6 +63,7 @@ function App() {
             {/* <Navbar left="Back" title="Detail" /> */}
             <Routes>
                 <Route path="/" element={<HomePage />} />
+                <Route path="/login" element={<Login />} />
                 <Route path="/search" element={<SearchPage />} />
                 <Route path="/search-detail/:id" element={<SearchDetail />} />
                 <Route
