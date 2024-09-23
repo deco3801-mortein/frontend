@@ -25,9 +25,15 @@ const Header = () => {
         navigate("/search"); // Navigate to the search page when the icon is clicked
     };
 
+    const handleMenuClick = () => {
+        navigate("/login"); // Navigate to the login page when the icon is clicked
+    };
+
     return (
         <header className="header">
-            <div className="menu-icon">&#9776;</div>
+            <div className="menu-icon" onClick={handleMenuClick}>
+                &#9776;
+            </div>
             <h1 className="title">My Plant</h1>
             <div className="search-icon" onClick={handleSearchClick}>
                 &#128269;
