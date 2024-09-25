@@ -31,11 +31,11 @@ const Header = () => {
 
     return (
         <header className="header">
-            <div className="menu-icon" onClick={handleMenuClick}>
+            <div className="menu-icon" onClick={handleMenuClick} style={{cursor:'pointer'}}>
                 &#9776;
             </div>
             <h1 className="title">My Plant</h1>
-            <div className="search-icon" onClick={handleSearchClick}>
+            <div className="search-icon" onClick={handleSearchClick} style={{cursor:'pointer'}}>
                 &#128269;
             </div>
         </header>
