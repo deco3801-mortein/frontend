@@ -10,8 +10,8 @@
         "preview": "vite preview"
     },
     "dependencies": {
+        "@deco3801-mortein/mortein-sdk": "^0.1.0",
         "json-server": "^1.0.0-beta.1",
-        "mortein-sdk": "https://github.com/deco3801-mortein/api/releases/download/v0.1.0/mortein-sdk-0.1.0.tgz",
         "react": "^18.3.1",
         "react-dom": "^18.3.1",
         "react-icons": "^5.3.0",
