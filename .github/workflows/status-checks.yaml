@@ -29,6 +29,8 @@ jobs:
           cache: npm
 
       - run: npm clean-install
+        env:
+          NPM_AUTH: ${{ secrets.NPM_AUTH }}
       - run: npx prettier --check .
 
   vite:
