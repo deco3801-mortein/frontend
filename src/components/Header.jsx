@@ -14,7 +14,6 @@
 // };
 
 // export default Header;
-import React from "react";
 import { useNavigate } from "react-router-dom"; // Import useNavigate for navigation
 import "../components/Header.css";
 
