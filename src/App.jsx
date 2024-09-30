@@ -64,9 +64,7 @@ function App() {
             .catch((error) => console.error(error));
     }, []);
 
-    const plantImages = [
-        image1,image2,image3
-    ];
+    const plantImages = [image1, image2, image3];
     let currentImage = 0;
     let detailPages = [];
     if (userData) {

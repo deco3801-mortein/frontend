@@ -21,7 +21,7 @@ import "../pages/HomePage.css";
 const HomePage = (props) => {
     return (
         <div className="home-page">
-            <Header left="Menu" title="My Plants" showGuide={true}/>
+            <Header left="Menu" title="My Plants" showGuide={true} />
             {props.userData && <PlantGrid userData={props.userData} />}
         </div>
     );

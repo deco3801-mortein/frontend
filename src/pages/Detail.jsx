@@ -43,7 +43,7 @@ function Detail(props) {
 Detail.propTypes = {
     plantData: PropTypes.object,
     toggleVibration: PropTypes.func,
-    imageSrc: PropTypes.string
+    imageSrc: PropTypes.string,
 };
 
 export default Detail;
