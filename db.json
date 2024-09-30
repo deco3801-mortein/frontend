@@ -8,8 +8,10 @@
                     "id": "1",
                     "name": "Orange Tree",
                     "data": {
-                        "sunlight": 25,
+                        "timestamp": "2024-09-29 06:40:40",
                         "moisture": 80,
+                        "sunlight": 25,
+                        "temperature": 50,
                         "vibration": false
                     }
                 },
@@ -17,8 +19,21 @@
                     "id": "2",
                     "name": "Tomato Plant",
                     "data": {
-                        "sunlight": 78,
+                        "timestamp": "2024-09-30 12:32:40",
                         "moisture": 32,
+                        "sunlight": 78,
+                        "temperature": 40,
+                        "vibration": true
+                    }
+                },
+                {
+                    "id": "2",
+                    "name": "Tomato Plant",
+                    "data": {
+                        "timestamp": "2024-09-30 12:32:40",
+                        "moisture": 32,
+                        "sunlight": 78,
+                        "temperature": 40,
                         "vibration": true
                     }
                 }
