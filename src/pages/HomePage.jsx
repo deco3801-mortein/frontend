@@ -22,13 +22,13 @@ const HomePage = (props) => {
     return (
         <div className="home-page">
             <Header />
-            {props.userData && <PlantGrid userData={props.userData}/>}
+            {props.userData && <PlantGrid userData={props.userData} />}
         </div>
     );
 };
 
 HomePage.propTypes = {
-    userData: PropTypes.object
+    userData: PropTypes.object,
 };
 
 export default HomePage;

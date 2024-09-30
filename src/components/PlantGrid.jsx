@@ -4,20 +4,29 @@ import "../components/PlantGrid";
 
 const PlantGrid = (props) => {
     const plants = props.userData.devices;
-    const plantImages = ["./src/assets/img/1.1.gif", "./src/assets/img/5.gif", "./src/assets/img/4.gif"];
+    const plantImages = [
+        "./src/assets/img/1.1.gif",
+        "./src/assets/img/5.gif",
+        "./src/assets/img/4.gif",
+    ];
     let currentImage = 0;
 
     return (
         <div className="plant-grid">
             {plants.map((plant) => (
-                <PlantItem key={plant.id} id={plant.id} imageSrc={plantImages[currentImage++ % 3]} name={plant.name} />
+                <PlantItem
+                    key={plant.id}
+                    id={plant.id}
+                    imageSrc={plantImages[currentImage++ % 3]}
+                    name={plant.name}
+                />
             ))}
         </div>
     );
 };
 
 PlantGrid.propTypes = {
-    userData: PropTypes.object
+    userData: PropTypes.object,
 };
 
 export default PlantGrid;

@@ -60,44 +60,45 @@ function App() {
             .catch((error) => console.error(error));
     }, []);
 
-    const plantImages = ["./src/assets/img/1.1.gif", "./src/assets/img/3.gif", "./src/assets/img/4.gif"];
+    const plantImages = [
+        "./src/assets/img/1.1.gif",
+        "./src/assets/img/3.gif",
+        "./src/assets/img/4.gif",
+    ];
     let currentImage = 0;
     let detailPages = [];
     if (userData) {
-        detailPages = userData.devices.map((device) => (
-            {path:`/detail/${device.id}`,
-            element: <Detail
-                        plantData={device}
-                        plantImage={plantImages[currentImage++ % 3]}
-                        toggleVibration={toggleVibration}
-                      />
-            })
-        )  
+        detailPages = userData.devices.map((device) => ({
+            path: `/detail/${device.id}`,
+            element: (
+                <Detail
+                    plantData={device}
+                    plantImage={plantImages[currentImage++ % 3]}
+                    toggleVibration={toggleVibration}
+                />
+            ),
+        }));
     }
 
     // Create page routes
     const router = createBrowserRouter([
-       {path: "/",
-        element: <HomePage userData={userData} />
-       },
-       {
-        path: "/login",
-        element: <Login />
-       },
-       {
-        path: "/search",
-        element: <SearchPage />
-       },
-       {
-        path: "/search-detail/:id",
-        element: <SearchDetail />
-       },
-       ...detailPages
-    ])
+        { path: "/", element: <HomePage userData={userData} /> },
+        {
+            path: "/login",
+            element: <Login />,
+        },
+        {
+            path: "/search",
+            element: <SearchPage />,
+        },
+        {
+            path: "/search-detail/:id",
+            element: <SearchDetail />,
+        },
+        ...detailPages,
+    ]);
 
-    return (
-        <RouterProvider router={router} />  
-    );
+    return <RouterProvider router={router} />;
 }
 
 export default App;

@@ -12,7 +12,7 @@ function Detail(props) {
 
     return (
         <div>
-            <Navbar left="Back" title="Detail" showGuide={true}/>
+            <Navbar left="Back" title="Detail" showGuide={true} />
             <div className="detail">
                 <div className="plant-main">
                     <img className="plant-image" />
