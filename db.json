@@ -5,46 +5,46 @@
             "username": "gardener",
             "devices": [
                 {
-                    "id": "1",
+                    "id": "0",
                     "name": "Orange Tree",
                     "data": {
                         "timestamp": "2024-09-29 06:40:40",
-                        "moisture": 80,
-                        "sunlight": 25,
-                        "temperature": 50,
+                        "moisture": 80.0,
+                        "sunlight": 25.5,
+                        "temperature": 50.32,
                         "vibration": false
                     }
                 },
                 {
-                    "id": "2",
+                    "id": "1",
                     "name": "Tomato Plant",
                     "data": {
                         "timestamp": "2024-09-30 12:32:40",
-                        "moisture": 32,
-                        "sunlight": 78,
-                        "temperature": 40,
+                        "moisture": 32.89,
+                        "sunlight": 78.56,
+                        "temperature": 40.02,
+                        "vibration": true
+                    }
+                },
+                {
+                    "id": "2",
+                    "name": "Potato Plant",
+                    "data": {
+                        "timestamp": "2024-09-30 12:32:40",
+                        "moisture": 32.98,
+                        "sunlight": 78.5,
+                        "temperature": 40.32,
                         "vibration": true
                     }
                 },
                 {
                     "id": "3",
-                    "name": "Potato Plant",
-                    "data": {
-                        "timestamp": "2024-09-30 12:32:40",
-                        "moisture": 32,
-                        "sunlight": 78,
-                        "temperature": 40,
-                        "vibration": true
-                    }
-                },
-                {
-                    "id": "4",
                     "name": "Lemon Tree",
                     "data": {
                         "timestamp": "2024-09-30 12:32:40",
-                        "moisture": 32,
-                        "sunlight": 50,
-                        "temperature": 40,
+                        "moisture": 32.43,
+                        "sunlight": 50.5,
+                        "temperature": 40.23,
                         "vibration": false
                     }
                 }
