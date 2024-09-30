@@ -17,11 +17,12 @@ import Header from "../components/Header";
 import PlantGrid from "../components/PlantGrid";
 import "../pages/HomePage.css";
 
-const HomePage = () => {
+const HomePage = (props) => {
+    console.log(props.userData);
     return (
         <div className="home-page">
             <Header />
-            <PlantGrid />
+            {props.userData && <PlantGrid userData={props.userData}/>}
         </div>
     );
 };

@@ -6,6 +6,7 @@ import PropTypes from "prop-types";
 
 // Function for main portion of detail page.
 function Detail(props) {
+    console.log("created");
     const { id } = useParams();
     // Data from API to be displayed
     const plantData = props.plantData;
