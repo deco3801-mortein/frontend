@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import Meter from "../components/Meter";
 import "../pages/Detail.css";
-import Navbar from "../components/Navbar";
+import Header from "../components/Navbar";
 import PropTypes from "prop-types";
 import image1 from "../assets/img/1.1.gif";
 import image2 from "../assets/img/5.gif";
@@ -19,7 +19,7 @@ function Detail(props) {
 
     return (
         <div>
-            <Navbar left="Back" title="Detail" showGuide={true} />
+            <Header left="Back" title="Detail" showGuide={true} />
             <div className="detail">
                 <div className="plant-main">
                     <img
