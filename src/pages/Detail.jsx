@@ -19,10 +19,14 @@ function Detail(props) {
 
     return (
         <div>
-            <Navbar left="Back" title="Detail" />
+            <Navbar left="Back" title="Detail" showGuide={true} />
             <div className="detail">
                 <div className="plant-main">
-                    <img src={plantImages[id - (1 % 3)]} className="plant-image" />
+                    <img
+                        src={plantImages[(id - 1) % 3]}
+                        alt="Plant image"
+                        className="plant-image"
+                    />
                     <h2>{device.name}</h2>
                 </div>
 
