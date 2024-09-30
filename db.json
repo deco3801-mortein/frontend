@@ -28,7 +28,7 @@
                 },
                 {
                     "id": "3",
-                    "name": "Tomato Plant",
+                    "name": "Potato Plant",
                     "data": {
                         "timestamp": "2024-09-30 12:32:40",
                         "moisture": 32,
@@ -36,7 +36,19 @@
                         "temperature": 40,
                         "vibration": true
                     }
+                },
+                {
+                    "id": "4",
+                    "name": "Lemon Tree",
+                    "data": {
+                        "timestamp": "2024-09-30 12:32:40",
+                        "moisture": 32,
+                        "sunlight": 50,
+                        "temperature": 40,
+                        "vibration": false
+                    }
                 }
+
             ]
         }
     ]
