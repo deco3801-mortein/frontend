@@ -21,6 +21,10 @@ import "./pages/Detail.css";
 import SearchPage from "./pages/SearchPage";
 import SearchDetail from "./pages/SearchDetail";
 import Login from "./pages/Login";
+import image1 from "./assets/img/1.1.gif";
+import image2 from "./assets/img/5.gif";
+import image3 from "./assets/img/4.gif";
+
 //import { Device } from "@deco3801-mortein/mortein-sdk/services.gen";
 
 function App() {
@@ -61,9 +65,7 @@ function App() {
     }, []);
 
     const plantImages = [
-        "./src/assets/img/1.1.gif",
-        "./src/assets/img/3.gif",
-        "./src/assets/img/4.gif",
+        image1,image2,image3
     ];
     let currentImage = 0;
     let detailPages = [];
@@ -73,7 +75,7 @@ function App() {
             element: (
                 <Detail
                     plantData={device}
-                    plantImage={plantImages[currentImage++ % 3]}
+                    imageSrc={plantImages[currentImage++ % 3]}
                     toggleVibration={toggleVibration}
                 />
             ),

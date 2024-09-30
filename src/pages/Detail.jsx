@@ -1,21 +1,22 @@
 import Meter from "../components/Meter";
 import "../pages/Detail.css";
-import Navbar from "../components/Navbar";
+import Header from "../components/Header";
 import PropTypes from "prop-types";
 
 // Function for main portion of detail page.
 function Detail(props) {
     // Data from API to be displayed
+    console.log(props.imageSrc);
     const plantData = props.plantData;
     const moistureData = props.plantData.data.moisture;
     const sunlightData = props.plantData.data.sunlight;
 
     return (
         <div>
-            <Navbar left="Back" title="Detail" showGuide={true} />
+            <Header left="Back" title="Detail" showGuide={true} />
             <div className="detail">
                 <div className="plant-main">
-                    <img className="plant-image" />
+                    <img src={props.imageSrc} alt="Image of plant" className="plant-image" />
                     <h2>{plantData.name}</h2>
                 </div>
 
@@ -42,6 +43,7 @@ function Detail(props) {
 Detail.propTypes = {
     plantData: PropTypes.object,
     toggleVibration: PropTypes.func,
+    imageSrc: PropTypes.string
 };
 
 export default Detail;
