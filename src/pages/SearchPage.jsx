@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { SearchBar } from "../components/SearchBar";
-import Navbar from "../components/Navbar";
+import Header from "../components/Header";
 import "../pages/SearchPage.css";
 
 const SearchPage = () => {
@@ -12,22 +12,11 @@ const SearchPage = () => {
     const handlePlantClick = (id) => {
         navigate(`/search-detail/${id}`); // Navigate to the renamed SearchDetail page
     };
-    let new_results = [];
 
     return (
         <div className="search-page">
-            <Navbar left="Back" title="Search for a Plant" showGuide={false} />
+            <Header left="Back" title="Search for a Plant" showGuide={false} />
             <SearchBar setResults={setResults} />
-            {/* {console.log(results)}
-            {console.log(results.map((plant) => plant.common_name))}
-            <ul>
-                {new_results = results.map((plant) => (
-                    <li>
-                        {plant.common_name}
-                    </li>
-                ))}
-                {new_results}
-            </ul> */}
             <ul className="results-list">
                 {results.map((plant) => (
                     <li
