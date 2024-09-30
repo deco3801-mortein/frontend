@@ -1,23 +1,29 @@
+import { useParams } from "react-router-dom";
 import Meter from "../components/Meter";
 import "../pages/Detail.css";
-import Header from "../components/Header";
+import Navbar from "../components/Navbar";
 import PropTypes from "prop-types";
+import image1 from "../assets/img/1.1.gif";
+import image2 from "../assets/img/5.gif";
+import image3 from "../assets/img/4.gif";
 
 // Function for main portion of detail page.
 function Detail(props) {
+    const { id } = useParams();
+    const device = props.userData.devices[id - 1];
     // Data from API to be displayed
-    console.log(props.imageSrc);
-    const plantData = props.plantData;
-    const moistureData = props.plantData.data.moisture;
-    const sunlightData = props.plantData.data.sunlight;
+    const moistureData = device.data.moisture;
+    const sunlightData = device.data.sunlight;
+
+    const plantImages = [image1, image2, image3];
 
     return (
         <div>
-            <Header left="Back" title="Detail" showGuide={true} />
+            <Navbar left="Back" title="Detail" />
             <div className="detail">
                 <div className="plant-main">
-                    <img src={props.imageSrc} alt="Image of plant" className="plant-image" />
-                    <h2>{plantData.name}</h2>
+                    <img src={plantImages[id - (1 % 3)]} className="plant-image" />
+                    <h2>{device.name}</h2>
                 </div>
 
                 <div className="plant-health">
@@ -28,10 +34,10 @@ function Detail(props) {
                         <h2 className="vibration-heading">Vibration</h2>
                         <button
                             className="vibration-button"
-                            value={plantData.id}
+                            value={device.id}
                             onClick={props.toggleVibration}
                         >
-                            {plantData.data.vibration ? "Off" : "On"}
+                            {device.data.vibration ? "Off" : "On"}
                         </button>
                     </div>
                 </div>
@@ -41,9 +47,8 @@ function Detail(props) {
 }
 
 Detail.propTypes = {
-    plantData: PropTypes.object,
+    userData: PropTypes.array,
     toggleVibration: PropTypes.func,
-    imageSrc: PropTypes.string,
 };
 
 export default Detail;
