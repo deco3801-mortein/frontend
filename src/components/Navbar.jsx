@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import { useNavigate } from "react-router-dom"; // Import useNavigate for navigation
+import "../components/Navbar.css"
 // Navigation header - used for both detail and plants pages
 // (with different props values)
 function Navbar(props) {
@@ -24,7 +25,7 @@ function Navbar(props) {
         <nav className="navbar">
             {props.left == "Back" ? <h2 className="back-icon" onClick={clickLeftFunction} style={{cursor:'pointer'}}>&lt;</h2> : <h2 className="menu-icon" onClick={clickLeftFunction} style={{cursor:'pointer'}}>&#9776;</h2>}
             <h1 className="navbar-title">{props.title}</h1>
-            {props.showGuide ? guideButton : <div></div>};
+            {props.showGuide ? guideButton : <div></div>}
         </nav>
     );
 }
