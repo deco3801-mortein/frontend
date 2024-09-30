@@ -1,22 +1,23 @@
+import PropTypes from "prop-types";
 import PlantItem from "../components/Plant";
 import "../components/PlantGrid";
 
 const PlantGrid = (props) => {
     const plants = props.userData.devices;
-    console.log(plants);
-    const plantsImages = ["./src/assets/img/1.1.gif", "./src/assets/img/5.gif", "./src/assets/img/4.gif", 
-        "/src/assets/img/1.1.gif", "/src/assets/img/5.gif", "/src/assets/img/4.gif"
-    ];
+    const plantImages = ["./src/assets/img/1.1.gif", "./src/assets/img/5.gif", "./src/assets/img/4.gif"];
     let currentImage = 0;
 
     return (
         <div className="plant-grid">
-            {console.log(plants[0].id)}
             {plants.map((plant) => (
-                <PlantItem key={plant.id} id={plant.id} imageSrc={plantsImages[currentImage++]} name={plant.name} />
+                <PlantItem key={plant.id} id={plant.id} imageSrc={plantImages[currentImage++ % 3]} name={plant.name} />
             ))}
         </div>
     );
+};
+
+PlantGrid.propTypes = {
+    userData: PropTypes.object
 };
 
 export default PlantGrid;

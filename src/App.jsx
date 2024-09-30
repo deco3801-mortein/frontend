@@ -13,8 +13,7 @@
 // export default App;
 
 import { useEffect, useState } from "react";
-import { BrowserRouter as Router, Routes, Route, createBrowserRouter, RouterProvider } from "react-router-dom";
-import Navbar from "./components/Navbar";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import Detail from "./pages/Detail";
 import "./App.css";
@@ -29,6 +28,7 @@ function App() {
     // const devices = Device.getDevice();
     // Function to toggle vibration
     function toggleVibration(event) {
+        console.log(event.target.value);
         let newDevices = [];
         for (let i = 0; i < userData.devices.length; i++) {
             let device = userData.devices[i];
@@ -42,6 +42,7 @@ function App() {
                 };
             }
             newDevices.push(device);
+            console.log(newDevices);
         }
         setUserData((prevData) => ({
             ...prevData,
@@ -58,19 +59,23 @@ function App() {
             })
             .catch((error) => console.error(error));
     }, []);
-    console.log(userData);
+
+    const plantImages = ["./src/assets/img/1.1.gif", "./src/assets/img/3.gif", "./src/assets/img/4.gif"];
+    let currentImage = 0;
     let detailPages = [];
     if (userData) {
         detailPages = userData.devices.map((device) => (
             {path:`/detail/${device.id}`,
             element: <Detail
                         plantData={device}
+                        plantImage={plantImages[currentImage++ % 3]}
                         toggleVibration={toggleVibration}
                       />
             })
         )  
     }
 
+    // Create page routes
     const router = createBrowserRouter([
        {path: "/",
         element: <HomePage userData={userData} />
@@ -89,16 +94,9 @@ function App() {
        },
        ...detailPages
     ])
-    console.log(detailPages);
-
-
-
-
-
 
     return (
-        <RouterProvider router={router} />
-         
+        <RouterProvider router={router} />  
     );
 }
 

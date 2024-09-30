@@ -1,4 +1,3 @@
-import { useParams } from "react-router-dom";
 import Meter from "../components/Meter";
 import "../pages/Detail.css";
 import Navbar from "../components/Navbar";
@@ -6,8 +5,6 @@ import PropTypes from "prop-types";
 
 // Function for main portion of detail page.
 function Detail(props) {
-    console.log("created");
-    const { id } = useParams();
     // Data from API to be displayed
     const plantData = props.plantData;
     const moistureData = props.plantData.data.moisture;

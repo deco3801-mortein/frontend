@@ -32,7 +32,7 @@ function Navbar(props) {
 
 Navbar.propTypes = {
     left: PropTypes.string,
-    title: PropTypes.number,
+    title: PropTypes.string,
     showGuide: PropTypes.bool
 };
 
