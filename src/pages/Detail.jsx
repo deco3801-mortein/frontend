@@ -10,7 +10,7 @@ import image3 from "../assets/img/4.gif";
 // Function for main portion of detail page.
 function Detail(props) {
     const { id } = useParams();
-    const device = props.userData.devices[id - 1];
+    const device = props.userData.devices[id];
     // Data from API to be displayed
     const moistureData = device.data.moisture;
     const sunlightData = device.data.sunlight;
@@ -23,7 +23,7 @@ function Detail(props) {
             <div className="detail">
                 <div className="plant-main">
                     <img
-                        src={plantImages[(id - 1) % 3]}
+                        src={plantImages[id % 3]}
                         alt="Plant image"
                         className="plant-image"
                     />
