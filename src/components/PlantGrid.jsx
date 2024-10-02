@@ -1,14 +1,13 @@
 import PropTypes from "prop-types";
 import PlantItem from "../components/Plant";
 import "../components/PlantGrid";
+import image1 from "../assets/img/1.1.gif";
+import image2 from "../assets/img/5.gif";
+import image3 from "../assets/img/4.gif";
 
 const PlantGrid = (props) => {
     const plants = props.userData.devices;
-    const plantImages = [
-        "./src/assets/img/1.1.gif",
-        "./src/assets/img/5.gif",
-        "./src/assets/img/4.gif",
-    ];
+    const plantImages = [image1, image2, image3];
     let currentImage = 0;
 
     return (
