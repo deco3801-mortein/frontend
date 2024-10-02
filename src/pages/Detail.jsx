@@ -22,11 +22,7 @@ function Detail(props) {
             <Header left="Back" title="Detail" showGuide={true} />
             <div className="detail">
                 <div className="plant-main">
-                    <img
-                        src={plantImages[id % 3]}
-                        alt="Plant image"
-                        className="plant-image"
-                    />
+                    <img src={plantImages[id % 3]} alt="Plant image" className="plant-image" />
                     <h2>{device.name}</h2>
                 </div>
 
