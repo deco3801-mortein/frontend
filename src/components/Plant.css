@@ -3,7 +3,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 2vh; /* Adjusted margin for better spacing */
 }
 
 .plant-image {
@@ -15,8 +14,8 @@
 
 .plant-name {
     align-items: center;
-    margin-top: 2vh; /* Adjusted margin for better spacing */
     font-size: 1.5rem;
+    margin-bottom: 1vh;
     color: #75a47f;
 }
 
@@ -24,6 +23,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-decoration-line: none;
 }
 
 /* PlantGrid CSS */
@@ -37,7 +37,13 @@
 /* Responsive adjustments */
 @media screen and (max-width: 768px) {
     .plant-grid {
-        grid-template-columns: repeat(3, 1fr); /* 2 columns on medium screens */
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on large screens */
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .plant-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
     }
 }
 

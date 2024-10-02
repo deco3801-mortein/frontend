@@ -1,20 +1,5 @@
-// import React from 'react';
-// import HomePage from './page/HomePage';
-// import './App.css';
-
-// function App() {
-//     return (
-//         <div className="App">
-//             <HomePage />
-//         </div>
-//     );
-// }
-
-// export default App;
-
 import { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
 import HomePage from "./pages/HomePage";
 import Detail from "./pages/Detail";
 import "./App.css";
@@ -62,7 +47,7 @@ function App() {
         <Router>
             {/* <Navbar left="Back" title="Detail" /> */}
             <Routes>
-                <Route path="/" element={<HomePage />} />
+                <Route path="/" element={<HomePage userData={userData} />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/search" element={<SearchPage />} />
                 <Route path="/search-detail/:id" element={<SearchDetail />} />
@@ -71,10 +56,7 @@ function App() {
                     element={
                         userData &&
                         userData.devices.length > 0 && (
-                            <Detail
-                                plantData={userData.devices[0]}
-                                toggleVibration={toggleVibration}
-                            />
+                            <Detail userData={userData} toggleVibration={toggleVibration} />
                         )
                     }
                 />

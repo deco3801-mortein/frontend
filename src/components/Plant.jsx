@@ -12,10 +12,14 @@
 
 // export default PlantItem;
 
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import "./Plant.css";
 
-function PlantItem({ id, imageSrc, name }) {
+function PlantItem(props) {
+    const id = props.id;
+    const imageSrc = props.imageSrc;
+    const name = props.name;
     return (
         <div className="plant-item">
             <Link className="please" to={`/detail/${id}`}>
@@ -26,5 +30,11 @@ function PlantItem({ id, imageSrc, name }) {
         </div>
     );
 }
+
+PlantItem.propTypes = {
+    id: PropTypes.string,
+    imageSrc: PropTypes.string,
+    name: PropTypes.string,
+};
 
 export default PlantItem;
