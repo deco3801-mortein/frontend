@@ -32,12 +32,14 @@ function App() {
     
 
     const [deviceData, setDeviceData] = useState(null);
+    if (userData) {
+        const device1 = {
+            id: userData[0].id
+        }
+    }
 
     useEffect(() => {
         if (userData) {
-            const device1 = {
-                id: userData[0].id
-            }
             const deviceInfo = Device.getDeviceById(device1);
             deviceInfo.promise.then((data) => {
                 setDeviceData(data);
@@ -47,7 +49,7 @@ function App() {
     }, [userData]);
 
     console.log(deviceData);
-    //const data = Device.getDeviceByDeviceIdHealthcheckDataLatest(userData[0].id);
+    const data = HealthcheckData.getDeviceByDeviceIdHealthcheckDataLatest();
     //console.log(data));
     //console.log(data);
     //console.log(data2);
