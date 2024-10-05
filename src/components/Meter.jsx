@@ -22,7 +22,7 @@ function Meter(props) {
             break;
         default:
             title = "Temperature";
-    };
+    }
 
     return (
         <div className={type}>

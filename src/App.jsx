@@ -12,24 +12,22 @@ import { Device } from "@deco3801-mortein/mortein-sdk/services.gen";
 function App() {
     const [userData, setUserData] = useState(null);
 
-
     useEffect(() => {
-         const devices = Device.getDevice();
-         devices.promise.then((data) => {
-             setUserData(data)
-         })
+        const devices = Device.getDevice();
+        devices.promise.then((data) => {
+            setUserData(data);
+        });
     }, []);
 
     console.log(userData);
 
-//     const [deviceData, setDeviceData] = useState(null);
-//     useEffect(() => {
-//         const deviceInfo = Device.getDeviceById();
-//         deviceInfo.promise.then((data) => {
-//             setDeviceData(data)
-//         })
-//    }, [setDeviceData]);
-    
+    //     const [deviceData, setDeviceData] = useState(null);
+    //     useEffect(() => {
+    //         const deviceInfo = Device.getDeviceById();
+    //         deviceInfo.promise.then((data) => {
+    //             setDeviceData(data)
+    //         })
+    //    }, [setDeviceData]);
 
     //const [deviceData, setDeviceData] = useState(null);
 
@@ -45,18 +43,16 @@ function App() {
     //     }
     // }, [userData]);
 
-
     //const deviceTest = {
-        //deviceId: '5646b954-9fe6-484b-b82e-72cb46ee1c61',
+    //deviceId: '5646b954-9fe6-484b-b82e-72cb46ee1c61',
     //};
     //const data = HealthcheckData.getDeviceByDeviceIdHealthcheckDataLatest(deviceTest);
     //console.log(data);
     //console.log(data);
     //console.log(data2);
-    
 
     // Function to toggle vibration
-    
+
     // function toggleVibration(event) {
     //     let newDevices = [];
     //     for (let i = 0; i < userData.devices.length; i++) {
@@ -87,24 +83,24 @@ function App() {
     //         })
     //         .catch((error) => console.error(error));
     // }, []);
-    
+
     return (
-          <Router>
-              <Routes>
-                  <Route path="/" element={<HomePage userData={userData} />} />
-                  <Route path="/login" element={<Login />} />
-                  <Route path="/search" element={<SearchPage />} />
-                  <Route path="/search-detail/:id" element={<SearchDetail />} />
-                  <Route
-                      path="/detail/:id"
-                      element={
-                          userData && (
-                              <Detail /> //toggleVibration={toggleVibration} />
-                          )
-                      }
-                  />
-              </Routes>
-          </Router>
+        <Router>
+            <Routes>
+                <Route path="/" element={<HomePage userData={userData} />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/search" element={<SearchPage />} />
+                <Route path="/search-detail/:id" element={<SearchDetail />} />
+                <Route
+                    path="/detail/:id"
+                    element={
+                        userData && (
+                            <Detail /> //toggleVibration={toggleVibration} />
+                        )
+                    }
+                />
+            </Routes>
+        </Router>
     );
 }
 

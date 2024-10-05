@@ -14,15 +14,15 @@ function Detail() {
 
     useEffect(() => {
         const deviceId = {
-            id: id
+            id: id,
         };
         const newDevice = Device.getDeviceById(deviceId);
         newDevice.promise.then((data) => {
             setDevice({
                 deviceId: data.id,
-                deviceName: data.name
-            })
-        })
+                deviceName: data.name,
+            });
+        });
     }, [id]);
     console.log(device);
 
@@ -31,10 +31,12 @@ function Detail() {
     useEffect(() => {
         if (device) {
             const newHealthData = HealthcheckData.getDeviceByDeviceIdHealthcheckDataLatest(device);
-            newHealthData.promise.then((data) => {
-                setCurrentHealthData(data)
-            }).catch((error) => console.log(error.message));
-        };
+            newHealthData.promise
+                .then((data) => {
+                    setCurrentHealthData(data);
+                })
+                .catch((error) => console.log(error.message));
+        }
     }, [device]);
 
     console.log(currentHealthData);
@@ -47,33 +49,37 @@ function Detail() {
     const plantImages = [image1, image2, image3];
     **/
     return (
-         <div>
-             <Header left="Back" title="Detail" showGuide={true} />
-             {!device && <p className="loading">Loading...</p>}
-             {device && (<div className="detail">
-                 <div className="plant-main">
-                     <img src={image1} alt="Plant image" className="plant-image" />
-                     <h2>{device.name}</h2>
-                 </div>
-                 {!currentHealthData && <p className="loading">Loading...</p>}
-                 {currentHealthData && (<div className="plant-health">
-                     <h2 className="plant-health-title">Plant Health</h2>
-                     <Meter type="moisture" level={currentHealthData.moisture} />
-                     <Meter type="sunlight" level={currentHealthData.sunlight} />
-                     <Meter type="temperature" level={currentHealthData.temperature} />
-                     <div className="vibration">
-                         <h2 className="vibration-heading">Vibration</h2>
-                         <button
-                             className="vibration-button"
-                             value={device.id}
-                             //onClick={props.toggleVibration}
-                         >
-                             {currentHealthData.isVibrating ? "Off" : "On"}
-                         </button>
-                     </div>
-                 </div>)}
-             </div>)}
-         </div>
+        <div>
+            <Header left="Back" title="Detail" showGuide={true} />
+            {!device && <p className="loading">Loading...</p>}
+            {device && (
+                <div className="detail">
+                    <div className="plant-main">
+                        <img src={image1} alt="Plant image" className="plant-image" />
+                        <h2>{device.name}</h2>
+                    </div>
+                    {!currentHealthData && <p className="loading">Loading...</p>}
+                    {currentHealthData && (
+                        <div className="plant-health">
+                            <h2 className="plant-health-title">Plant Health</h2>
+                            <Meter type="moisture" level={currentHealthData.moisture} />
+                            <Meter type="sunlight" level={currentHealthData.sunlight} />
+                            <Meter type="temperature" level={currentHealthData.temperature} />
+                            <div className="vibration">
+                                <h2 className="vibration-heading">Vibration</h2>
+                                <button
+                                    className="vibration-button"
+                                    value={device.id}
+                                    //onClick={props.toggleVibration}
+                                >
+                                    {currentHealthData.isVibrating ? "Off" : "On"}
+                                </button>
+                            </div>
+                        </div>
+                    )}
+                </div>
+            )}
+        </div>
     );
 }
 
