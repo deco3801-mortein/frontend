@@ -19,38 +19,6 @@ function App() {
         });
     }, []);
 
-    console.log(userData);
-
-    //     const [deviceData, setDeviceData] = useState(null);
-    //     useEffect(() => {
-    //         const deviceInfo = Device.getDeviceById();
-    //         deviceInfo.promise.then((data) => {
-    //             setDeviceData(data)
-    //         })
-    //    }, [setDeviceData]);
-
-    //const [deviceData, setDeviceData] = useState(null);
-
-    // useEffect(() => {
-    //     if (userData) {
-
-    //         const device1 = userData[0];
-    //         const deviceInfo = Device.getDeviceById(device1);
-    //         deviceInfo.promise.then((data) => {
-    //             setDeviceData(data);
-    //         })
-    //         console.log(deviceInfo);
-    //     }
-    // }, [userData]);
-
-    //const deviceTest = {
-    //deviceId: '5646b954-9fe6-484b-b82e-72cb46ee1c61',
-    //};
-    //const data = HealthcheckData.getDeviceByDeviceIdHealthcheckDataLatest(deviceTest);
-    //console.log(data);
-    //console.log(data);
-    //console.log(data2);
-
     // Function to toggle vibration
 
     // function toggleVibration(event) {
@@ -73,16 +41,6 @@ function App() {
     //         devices: newDevices,
     //     }));
     // }
-
-    // // Fetch API data
-    // useEffect(() => {
-    //     fetch("http://localhost:3000/users/1")
-    //         .then((response) => response.json())
-    //         .then((data) => {
-    //             setUserData(data);
-    //         })
-    //         .catch((error) => console.error(error));
-    // }, []);
 
     return (
         <Router>
