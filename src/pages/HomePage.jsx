@@ -22,6 +22,7 @@ const HomePage = (props) => {
     return (
         <div className="home-page">
             <Header left="Menu" title="My Plants" showGuide={true} />
+            {!props.userData && <p className="loading">Loading...</p>}
             {props.userData && <PlantGrid userData={props.userData} />}
         </div>
     );
