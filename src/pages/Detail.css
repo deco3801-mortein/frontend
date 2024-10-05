@@ -44,6 +44,10 @@
     flex-direction: column;
 }
 
+.loading {
+    padding-left: 30px;
+}
+
 .plant-health-title {
     margin-bottom: 3vh;
     font-size: 2rem;
@@ -73,6 +77,10 @@
 
 .moisture .level {
     background-color: #b0cce8;
+}
+
+.temperature .level {
+    background-color: rgb(247, 166, 242);
 }
 
 .vibration-button {
