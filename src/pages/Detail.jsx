@@ -4,10 +4,7 @@ import { Device, HealthcheckData } from "@deco3801-mortein/mortein-sdk/services.
 import Meter from "../components/Meter";
 import "../pages/Detail.css";
 import Header from "../components/Navbar";
-import PropTypes from "prop-types";
 import image1 from "../assets/img/1.1.gif";
-import image2 from "../assets/img/5.gif";
-import image3 from "../assets/img/4.gif";
 
 // Function for main portion of detail page.
 function Detail() {
