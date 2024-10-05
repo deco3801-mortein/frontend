@@ -28,7 +28,7 @@ const HomePage = (props) => {
 };
 
 HomePage.propTypes = {
-    userData: PropTypes.object,
+    userData: PropTypes.array,
 };
 
 export default HomePage;
