@@ -17,12 +17,14 @@ function Detail() {
             id: id,
         };
         const newDevice = Device.getDeviceById(deviceId);
-        newDevice.promise.then((data) => {
-            setDevice({
-                deviceId: data.id,
-                deviceName: data.name,
-            });
-        });
+        newDevice
+            .then((data) => {
+                setDevice({
+                    deviceId: data.id,
+                    deviceName: data.name,
+                });
+            })
+            .catch((error) => console.error(error.message));
     }, [id]);
 
     const [currentHealthData, setCurrentHealthData] = useState(null);
@@ -30,7 +32,7 @@ function Detail() {
     useEffect(() => {
         if (device) {
             const newHealthData = HealthcheckData.getDeviceByDeviceIdHealthcheckDataLatest(device);
-            newHealthData.promise
+            newHealthData
                 .then((data) => {
                     setCurrentHealthData(data);
                 })

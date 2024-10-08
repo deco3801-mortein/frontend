@@ -14,7 +14,7 @@ function App() {
 
     useEffect(() => {
         const devices = Device.getDevice();
-        devices.promise
+        devices
             .then((data) => {
                 setUserData(data);
             })
