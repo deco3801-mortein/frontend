@@ -16,8 +16,7 @@ function Detail() {
         const deviceId = {
             id: id,
         };
-        const newDevice = Device.getDeviceById(deviceId);
-        newDevice
+        Device.getDeviceById(deviceId)
             .then((data) => {
                 setDevice({
                     deviceId: data.id,
@@ -31,8 +30,7 @@ function Detail() {
 
     useEffect(() => {
         if (device) {
-            const newHealthData = HealthcheckData.getDeviceByDeviceIdHealthcheckDataLatest(device);
-            newHealthData
+            HealthcheckData.getDeviceByDeviceIdHealthcheckDataLatest(device)
                 .then((data) => {
                     setCurrentHealthData(data);
                 })

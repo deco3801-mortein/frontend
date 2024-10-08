@@ -13,8 +13,7 @@ function App() {
     const [userData, setUserData] = useState(null);
 
     useEffect(() => {
-        const devices = Device.getDevice();
-        devices
+        Device.getDevice()
             .then((data) => {
                 setUserData(data);
             })
