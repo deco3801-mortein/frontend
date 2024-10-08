@@ -24,7 +24,6 @@ function Detail() {
             });
         });
     }, [id]);
-    console.log(device);
 
     const [currentHealthData, setCurrentHealthData] = useState(null);
 
@@ -38,8 +37,6 @@ function Detail() {
                 .catch((error) => console.log(error.message));
         }
     }, [device]);
-
-    console.log(currentHealthData);
 
     //const device = props.userData.devices[id];
     // Data from API to be displayed
@@ -56,7 +53,7 @@ function Detail() {
                 <div className="detail">
                     <div className="plant-main">
                         <img src={image1} alt="Plant image" className="plant-image" />
-                        <h2>{device.name}</h2>
+                        <h2>{device.deviceName}</h2>
                     </div>
                     {!currentHealthData && <p className="loading">Loading...</p>}
                     {currentHealthData && (
