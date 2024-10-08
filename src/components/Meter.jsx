@@ -20,8 +20,11 @@ function Meter(props) {
         case "moisture":
             title = "Soil Moisture";
             break;
-        default:
+        case "temperature":
             title = "Temperature";
+            break;
+        default:
+            throw new Error("Invalid meter type");
     }
 
     return (
