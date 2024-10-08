@@ -14,9 +14,11 @@ function App() {
 
     useEffect(() => {
         const devices = Device.getDevice();
-        devices.promise.then((data) => {
-            setUserData(data);
-        }).catch((error) => console.error(error.message));
+        devices.promise
+            .then((data) => {
+                setUserData(data);
+            })
+            .catch((error) => console.error(error.message));
     }, []);
 
     // Function to toggle vibration
