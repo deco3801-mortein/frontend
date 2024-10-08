@@ -10,6 +10,8 @@ import image1 from "../assets/img/1.1.gif";
 function Detail() {
     const { id } = useParams();
 
+    const [deviceNotFound, setDeviceNotFound] = useState(false);
+
     const [device, setDevice] = useState(null);
 
     useEffect(() => {
@@ -23,8 +25,13 @@ function Detail() {
                     deviceName: data.name,
                 });
             })
-            .catch((error) => console.error(error.message));
+            .catch((error) => {
+                console.error(error.message);
+                setDeviceNotFound(true);
+            });
     }, [id]);
+
+    const [dataNotFound, setDataNotFound] = useState(false);
 
     const [currentHealthData, setCurrentHealthData] = useState(null);
 
@@ -34,7 +41,10 @@ function Detail() {
                 .then((data) => {
                     setCurrentHealthData(data);
                 })
-                .catch((error) => console.log(error.message));
+                .catch((error) => {
+                    console.log(error.message);
+                    setDataNotFound(true);
+                });
         }
     }, [device]);
 
@@ -46,16 +56,18 @@ function Detail() {
     const plantImages = [image1, image2, image3];
     **/
     return (
-        <div>
+        <div className="detail">
             <Header left="Back" title="Detail" showGuide={true} />
-            {!device && <p className="loading">Loading...</p>}
+            {!device && !deviceNotFound && <p className="loading">Loading...</p>}
+            {!device && deviceNotFound && <p className="device-not-found">Device Not Found</p>}
             {device && (
-                <div className="detail">
+                <div className="detail-content">
                     <div className="plant-main">
                         <img src={image1} alt="Plant image" className="plant-image" />
                         <h2>{device.deviceName}</h2>
                     </div>
-                    {!currentHealthData && <p className="loading">Loading...</p>}
+                    {!currentHealthData && !dataNotFound && <p className="loading">Loading...</p>}
+                    {!currentHealthData && dataNotFound && <p className="data-not-found">Data Not Found</p>}
                     {currentHealthData && (
                         <div className="plant-health">
                             <h2 className="plant-health-title">Plant Health</h2>
