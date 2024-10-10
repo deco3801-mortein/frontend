@@ -7,56 +7,63 @@ import "./pages/Detail.css";
 import SearchPage from "./pages/SearchPage";
 import SearchDetail from "./pages/SearchDetail";
 import Login from "./pages/Login";
+import { Device } from "@deco3801-mortein/mortein-sdk/services.gen";
 
 function App() {
-    const [userData, setUserData] = useState(null);
+    const [devicesNotFound, setDevicesNotFound] = useState(false);
+
+    const [devices, setDevices] = useState(null);
+
+    useEffect(() => {
+        Device.getDevice()
+            .then((data) => {
+                setDevices(data);
+            })
+            .catch((error) => {
+                console.error(error.message);
+                setDevicesNotFound(true);
+            });
+    }, []);
+    console.log(devices);
 
     // Function to toggle vibration
-    function toggleVibration(event) {
-        let newDevices = [];
-        for (let i = 0; i < userData.devices.length; i++) {
-            let device = userData.devices[i];
-            if (device.id === event.target.value) {
-                device = {
-                    ...device,
-                    data: {
-                        ...device.data,
-                        vibration: !device.data.vibration,
-                    },
-                };
-            }
-            newDevices.push(device);
-        }
-        setUserData((prevData) => ({
-            ...prevData,
-            devices: newDevices,
-        }));
-    }
 
-    // Fetch API data
-    useEffect(() => {
-        fetch("http://localhost:3000/users/1")
-            .then((response) => response.json())
-            .then((data) => {
-                setUserData(data);
-            })
-            .catch((error) => console.error(error));
-    }, []);
+    // function toggleVibration(event) {
+    //     let newDevices = [];
+    //     for (let i = 0; i < userData.devices.length; i++) {
+    //         let device = userData.devices[i];
+    //         if (device.id === event.target.value) {
+    //             device = {
+    //                 ...device,
+    //                 data: {
+    //                     ...device.data,
+    //                     vibration: !device.data.vibration,
+    //                 },
+    //             };
+    //         }
+    //         newDevices.push(device);
+    //     }
+    //     setUserData((prevData) => ({
+    //         ...prevData,
+    //         devices: newDevices,
+    //     }));
+    // }
 
     return (
         <Router>
-            {/* <Navbar left="Back" title="Detail" /> */}
             <Routes>
-                <Route path="/" element={<HomePage userData={userData} />} />
+                <Route
+                    path="/"
+                    element={<HomePage devices={devices} devicesNotFound={devicesNotFound} />}
+                />
                 <Route path="/login" element={<Login />} />
                 <Route path="/search" element={<SearchPage />} />
                 <Route path="/search-detail/:id" element={<SearchDetail />} />
                 <Route
                     path="/detail/:id"
                     element={
-                        userData &&
-                        userData.devices.length > 0 && (
-                            <Detail userData={userData} toggleVibration={toggleVibration} />
+                        devices && (
+                            <Detail /> //toggleVibration={toggleVibration} />
                         )
                     }
                 />

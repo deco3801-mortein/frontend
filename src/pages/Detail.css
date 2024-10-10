@@ -12,8 +12,8 @@
 
 .detail {
     background-color: #fdfff2;
-    width: 100vw;
-    height: 100vh;
+    max-width: 100vw;
+    min-height: 100vh;
     background-size: cover;
 }
 
@@ -42,6 +42,17 @@
     padding-left: 10vh;
     display: flex;
     flex-direction: column;
+}
+
+.loading {
+    padding-left: 3vh;
+    font-size: 1.4rem;
+}
+
+.device-not-found,
+.data-not-found {
+    padding-left: 3vh;
+    font-size: 1.4rem;
 }
 
 .plant-health-title {
@@ -73,6 +84,10 @@
 
 .moisture .level {
     background-color: #b0cce8;
+}
+
+.temperature .level {
+    background-color: rgb(247, 166, 242);
 }
 
 .vibration-button {

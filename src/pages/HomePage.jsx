@@ -22,13 +22,18 @@ const HomePage = (props) => {
     return (
         <div className="home-page">
             <Header left="Menu" title="My Plants" showGuide={true} />
-            {props.userData && <PlantGrid userData={props.userData} />}
+            {!props.devices && !props.devicesNotFound && <p className="loading">Loading...</p>}
+            {!props.devices && props.devicesNotFound && (
+                <p className="devices-not-found">No Devices Found</p>
+            )}
+            {props.devices && !props.devicesNotFound && <PlantGrid devices={props.devices} />}
         </div>
     );
 };
 
 HomePage.propTypes = {
-    userData: PropTypes.object,
+    devices: PropTypes.array,
+    devicesNotFound: PropTypes.bool,
 };
 
 export default HomePage;

@@ -11,7 +11,21 @@ function Meter(props) {
     // Different heights for level = 1, 2, 3, 4
     const lowLevelHeights = [50, 65, 80, 93];
 
-    const title = type == "sunlight" ? "Sunlight Exposure" : "Soil Moisture";
+    let title;
+
+    switch (type) {
+        case "sunlight":
+            title = "Sunlight Exposure";
+            break;
+        case "moisture":
+            title = "Soil Moisture";
+            break;
+        case "temperature":
+            title = "Temperature";
+            break;
+        default:
+            throw new Error("Invalid meter type");
+    }
 
     return (
         <div className={type}>
