@@ -3,7 +3,6 @@
     width: 100vw;
     height: 100vh;
     margin: 0 auto;
-    padding: 20px;
     font-family: "PilserLight", sans-serif;
     background-color: #f8f8f0;
     text-align: center;
@@ -35,6 +34,7 @@
 
 /* Container for plant information */
 .plant-info {
+    margin-left: 9vh;
     margin-top: 3vh;
 }
 

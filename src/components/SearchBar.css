@@ -1,4 +1,4 @@
-/* Container for the search input and title */
+
 .search-container {
     margin: 0 auto;
     text-align: center;
@@ -12,7 +12,6 @@
     font-family: "PilserBold", sans-serif;
 }
 
-/* Wrapper for the search input and icon */
 .input-wrapper {
     width: 70vw;
     height: 4vh;
@@ -24,7 +23,7 @@
     box-shadow: 0 1vh 2vh rgba(0, 0, 0, 0.1);
 }
 
-/* Style for the search icon */
+
 #search-icon {
     width: 2vw;
     height: 2vh;
@@ -32,27 +31,27 @@
     color: #7d9778;
 }
 
-/* Style for the input box */
+
 input {
     border: none;
     outline: none;
     font-size: 16px;
     color: #7d9778;
-    background-color: transparent; /* Matches the background */
+    background-color: transparent; 
 }
 
-/* Placeholder text style */
+
 input::placeholder {
     font-family: "PilserLight", sans-serif;
-    color: #a0a0a0; /* Light gray for the placeholder */
+    color: #a0a0a0;
 }
 
-/* Loading message style */
+
 .text-gray-600 {
     color: #7d9778;
 }
 
-/* Error message styling */
+
 .message-none-box {
     margin-top: 20px;
     font-size: 16px;

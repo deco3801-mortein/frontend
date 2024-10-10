@@ -7,7 +7,7 @@ function Navbar(props) {
     const navigate = useNavigate(); // Initialize the navigation hook
 
     const handleSearchClick = () => {
-        navigate("/search"); // Navigate to the search page when the icon is clicked
+        navigate("/garden-guidance"); // Navigate to the search page when the icon is clicked
     };
 
     const handleMenuClick = () => {

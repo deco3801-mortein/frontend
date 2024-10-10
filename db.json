@@ -12,6 +12,7 @@
                         "moisture": 80.0,
                         "sunlight": 25.5,
                         "temperature": 50.32,
+                        "humidity": 24,
                         "vibration": false
                     }
                 },
@@ -22,7 +23,8 @@
                         "timestamp": "2024-09-30 12:32:40",
                         "moisture": 32.89,
                         "sunlight": 78.56,
-                        "temperature": 40.02,
+                        "temperature": 22,
+                        "humidity": 65,
                         "vibration": true
                     }
                 },
@@ -34,6 +36,7 @@
                         "moisture": 32.98,
                         "sunlight": 78.5,
                         "temperature": 40.32,
+                        "humidity": 24,
                         "vibration": true
                     }
                 },
@@ -45,6 +48,7 @@
                         "moisture": 32.43,
                         "sunlight": 50.5,
                         "temperature": 40.23,
+                        "humidity": 24,
                         "vibration": false
                     }
                 }

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import "./SearchBar.css";
 
-const API_KEY = "sk-7NuB66e38c2a660d46837";
+const API_KEY = import.meta.env.VITE_API_KEY;
 
 export const SearchBar = ({ setResults }) => {
     const [input, setInput] = useState("");
@@ -11,7 +11,7 @@ export const SearchBar = ({ setResults }) => {
 
     useEffect(() => {
         const fetchData = async () => {
-            if (input.length >= 3) {
+            if (input.length >= 2) {
                 setLoading(true);
                 setError(null);
 

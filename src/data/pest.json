@@ -1,0 +1,481 @@
+{
+    "pest": [
+      {
+        "id": 1,
+        "name": "Allium Leaf Miner",
+        "img": "https://gardenplannerwebsites.azureedge.net/bbh/pests/eu/ALLM2.jpg",
+        "Timing March": "June and September-November",
+        "hostPlants": [
+          "Ornamental alliums",
+          "Onion",
+          "Leek",
+          "Chives",
+          "Garlic",
+          "Shallots"
+        ],
+        "description": "The adult allium leaf miner is a small dark-coloured fly approximately 3mm in length. The female flies make small puncture marks into the tips of leaves and lay eggs into the plant tissue. Eggs hatch into maggots that burrow down into the plant creating tunnels as they feed and grow. The maggots turn into small brown pupae at the base of the plants, either remaining in the mine or breaking out between the stem and the leaves.",
+        "damage": "Puncture marks where the female flies have been laying eggs appear as a series of white dots on the tips of leaves. The resulting maggots produce mines that run down through the plant, often resulting in rotting that can eventually destroy the whole plant. Plants can be effectively protected by covering them with an insect-proof mesh, at times when the adult flies are active and laying eggs. ",
+        "tips": "Infected crops should be removed during the winter months when the pupae are dormant. Those that may be within the soil can be exposed to insectivorous birds by regularly digging the soil. "
+      },
+      {
+        "id": 2,
+        "name": "Aphid, Black Bean",
+        "img": "https://gardenplannerwebsites.azureedge.net/bbh/pests/eu/APHB2.jpg",
+        "hostPlants": [
+          "Viburnum",
+          "Dahlia",
+          "Nasturtium",
+          "Philadelphus",
+          "Euonymus",
+          "Field & broad beans",
+          "Dwarf French beans",
+          "Runner beans",
+          "Sugar beet",
+          "Fodder beet",
+          "Spinach"
+        ],
+        "description": "Black bean aphids, also known as blackfly, are small sap-sucking insects about 2mm long, mainly black with some white flecks. They can form dense colonies on young shoots and the undersides of leaves. Ants often farm them for the honeydew they excrete.",
+        "damage": "Black bean aphids weaken plants by sucking their sap, leading to yellowing, curled leaves, and stunted growth. They can also transmit plant viruses. On beans, heavy infestations can reduce pod formation, while ornamental plants may have their flowers damaged.",
+        "tips": "It’s advisable to tolerate some aphids in the garden, as they provide food for natural predators like ladybirds and hoverflies. Encouraging these predators can help control aphid populations naturally."
+      },
+      {
+        "id": 3, 
+        "name": "Aphid, Cabbage",
+        "img": "https://www.growveg.com.au/pests/uk-and-europe/cabbage-aphid/",
+        "hostPlants": [
+          "Brussels sprouts",
+          "Cabbage",
+          "Kale",
+          "Broccoli",
+          "Cauliflower",
+          "Swede",
+          "Oil seed rape"
+        ],
+        "description": "Cabbage aphids are sap-sucking insects that appear bluish-grey due to a pale waxy coating. They form dense clusters on the undersides of leaves, particularly on brassicas, causing yellowing and curling of foliage. Infestations increase in late summer and persist through autumn.",
+        "damage": "Cabbage aphids camouflage well and may go unnoticed until their populations grow. They feed by sucking sap, leading to stunted plant growth and discolored leaves. Black honeydew deposits on plants indicate their feeding activity. Late-maturing brassicas like Brussels sprouts are especially susceptible to damage.",
+        "tips": "Regularly check brassicas from spring onwards to catch infestations early. Remove old plants and affected leaves to prevent overwintering of aphids. Encourage natural predators such as ladybirds and lacewings, which are effective in controlling aphid populations."
+      },      
+      {
+        "id": 4,
+        "name": "Aphid, Rose",
+        "hostPlants": [
+          "Cultivated roses"
+        ],
+        "description": "Rose aphids, including the common species Macrosiphum rosae, are green or pinkish-red and can reach up to 3.5mm in length. They are often clustered around rose flower buds, young shoots, and the undersides of leaves. Aphid populations are most active from March to August.",
+        "damage": "Rose aphids damage plants by sucking sap, weakening shoots and flower buds. Flowers may open deformed, and the honeydew they excrete can attract ants and cause sooty mould to grow on affected plants.",
+        "tips": "Regularly check your roses for early signs of aphid infestations. Use finger and thumb to squash aphids or prune and dispose of affected plant parts. Encourage beneficial insects like ladybirds and lacewings, which are natural predators of aphids."
+      },
+      {
+        "id": 5,
+        "name": "Aphid, Woolly",
+        "hostPlants": [
+          "Cotoneaster",
+          "Pyracantha",
+          "Ornamental species of Malus",
+          "Apple trees"
+        ],
+        "description": "Woolly aphids are easily identified by the mass of white, woolly wax they produce. They are typically brown or greyish-purple in color, although this is often hidden beneath the waxy covering. These aphids are usually found on branches, spurs, or within bark cracks of host plants.",
+        "damage": "Woolly aphids cause galls to form on host plants, which can split open and provide entry points for diseases like cankers.",
+        "tips": "Regularly inspect plants for signs of early infestation. Squash aphids manually or use a stiff brush to remove them. Encourage natural predators, such as ladybirds, lacewings, and earwigs, to help control the aphid population."
+      },
+      {
+        "id": 6,
+        "name": "Asparagus Beetle",
+        "hostPlants": [
+          "Asparagus"
+        ],
+        "description": "The Asparagus Beetle is a slender, elongated beetle with distinctive white or yellow spots on its wings and reddish coloring around the wing margins. The larvae are greyish-green and resemble small slugs.",
+        "damage": "Adult beetles chew notches into the spears of asparagus, causing them to grow crooked. Larvae feed on the foliage, further weakening the plant.",
+        "tips": "To prevent overwintering, clear old fronds and weeds from the asparagus patch in early winter. Hand-pick beetles or encourage beneficial wasps to control outbreaks."
+      },
+      {
+        "id": 7,
+        "name": "Cabbage White Butterfly",
+        "hostPlants": [
+          "Cabbage",
+          "Brussels sprouts",
+          "Broccoli",
+          "Kale"
+        ],
+        "description": "The Cabbage White Butterfly is a common pest of brassicas. Its caterpillars are pale green with velvety bodies and can cause extensive damage to crops.",
+        "damage": "Caterpillars chew large holes in the leaves, often leading to skeletonization of the plants if left uncontrolled.",
+        "tips": "To prevent egg-laying, use butterfly netting over crops. Hand-pick caterpillars regularly, and encourage natural predators like parasitic wasps to control the population."
+      },
+      {
+        "id": 8,
+        "name": "Bay Sucker Psyllid",
+        "hostPlants": [
+          "Bay trees"
+        ],
+        "description": "Bay Sucker Psyllid adults are pale brown, about 2mm in length, resembling winged aphids. They lay eggs that hatch into scale-like larvae, which produce a white waxy coating.",
+        "damage": "Infested leaves become curled, deformed, and yellowed. The honeydew excreted by the insects attracts sooty moulds, which make the leaves sticky.",
+        "tips": "Inspect regularly for curled leaves and remove them to prevent the spread of the infestation. Encourage natural predators such as ladybirds, which feed on psyllids."
+      },
+      {
+        "id": 9,
+        "name": "Box Tree Moth",
+        "hostPlants": [
+          "Box trees"
+        ],
+        "description": "The larvae of the box tree moth are greenish-yellow with black spots and are capable of causing extensive defoliation on box trees.",
+        "damage": "Larvae feed voraciously on box tree leaves, leaving behind webs and completely stripping the plants. Severe infestations can result in plant death if left untreated.",
+        "tips": "Remove infested leaves as soon as they are spotted and use pheromone traps to monitor moth activity. Natural predators, such as birds, can help reduce populations of this pest."
+      },
+      {
+        "id": 10,
+        "name": "Cabbage Moth",
+        "hostPlants": [
+          "Cabbage",
+          "Broccoli",
+          "Kale"
+        ],
+        "description": "Cabbage moth larvae are light green with a thin stripe down the back. The adult moths are nocturnal and lay eggs on the undersides of leaves.",
+        "damage": "The larvae feed on the leaves, creating holes and potentially skeletonizing the foliage if the infestation is severe.",
+        "tips": "Handpick larvae when noticed or use fine netting to cover crops and prevent moths from laying eggs. Encourage natural predators like parasitic wasps to help control the population."
+      },
+      {
+        "id": 11,
+        "name": "Cabbage Root Fly",
+        "hostPlants": [
+          "Cabbage",
+          "Cauliflower",
+          "Broccoli"
+        ],
+        "description": "Cabbage Root Fly adults resemble small houseflies. They lay eggs at the base of plants, and the larvae burrow into the roots.",
+        "damage": "The larvae feed on the plant roots, leading to wilting, stunted growth, and potentially causing the plants to die if left unchecked.",
+        "tips": "Use physical barriers, such as collars around the base of plant stems, to prevent egg-laying. Implementing crop rotation can also help reduce the population of cabbage root flies over time."
+      },
+      {
+        "name": "Capsid Bug",
+        "hostPlants": [
+          "Fruit crops",
+          "Vegetables"
+        ],
+        "description": "Capsid bugs are small, greenish insects that feed on plant sap, causing pitting and deformities in fruits and vegetables.",
+        "damage": "Feeding by capsid bugs results in small, raised, and corky areas on fruits, reducing the quality of the crop.",
+        "tips": "Remove and destroy damaged plant parts. Encourage natural predators, such as birds, to help manage capsid bug populations."
+      },
+      {
+        "id": 12,
+        "name": "Carrot Root Fly",
+        "hostPlants": [
+          "Carrots",
+          "Parsnips"
+        ],
+        "description": "The adult carrot root fly lays eggs at the base of carrot plants. The larvae then tunnel into the roots, causing extensive damage.",
+        "damage": "The larvae create tunnels in the carrot roots, leading to rot and significantly reduced crop yields.",
+        "tips": "Use fine mesh covers to prevent the fly from laying eggs and practice crop rotation to reduce infestations. Remove and dispose of affected plants immediately to prevent the spread of larvae."
+      },
+      {
+        "id": 13,
+        "name": "Cockchafer (May Bug)",
+        "hostPlants": [
+          "Grass",
+          "Cereal crops"
+        ],
+        "description": "Cockchafers are large, brown beetles with distinctive fan-like antennae. The larvae, known as grubs, feed on plant roots, particularly of grass and cereal crops.",
+        "damage": "The grubs feed on the roots of grass and crops, causing wilting and plant death due to root damage.",
+        "tips": "Manually remove adult beetles when spotted. Encourage predatory birds, which naturally feed on the grubs, to help control the population."
+      },
+      {
+        "id": 14,
+        "name": "Garden Chafer",
+        "hostPlants": [
+          "Grass", 
+          "Lawns"
+        ],
+        "description": "Garden Chafers are small beetles that feed on grass roots, and their larvae (grubs) cause significant damage by consuming the roots.",
+        "damage": "The grass becomes yellow and eventually dies due to the extensive root damage caused by the larvae.",
+        "tips": "Encourage birds that naturally feed on the grubs. Apply nematodes to control the larvae population in affected areas."
+      },
+      {
+        "name": "Rose Chafer",
+        "hostPlants": [
+          "Roses", 
+          "Ornamental plants"
+        ],
+        "description": "Rose Chafers are metallic green beetles that feed on flowers and leaves of various ornamental plants, especially roses.",
+        "damage": "They chew holes in leaves and flowers, causing damage to blooms and reducing the aesthetic value of plants.",
+        "tips": "Manually remove the beetles when spotted, and use insect netting to protect vulnerable plants from infestation."
+      },
+      {
+        "id": 15,
+        "name": "Chrysanthemum Leaf Miner",
+        "hostPlants": [
+          "Chrysanthemums", 
+          "Other ornamentals"
+        ],
+        "description": "Chrysanthemum Leaf Miners are small flies that tunnel through the leaves of plants, creating visible leaf mines.",
+        "damage": "The larvae create mines or tunnels in the leaves, leading to disfigurement and reducing the plant's aesthetic value.",
+        "tips": "Remove and dispose of affected leaves to prevent the spread of the larvae. Use insecticidal soap as a preventive measure to control infestations."
+      },
+      {
+        "id": 16,
+        "name": "Codling Moth",
+        "hostPlants": [
+          "Apple", 
+          "Pear"
+        ],
+        "description": "Codling moths are small insects whose larvae tunnel into apples and pears, causing significant fruit damage.",
+        "damage": "The larvae tunnel into the fruit, making it inedible and leading to crop loss.",
+        "tips": "Use pheromone traps to monitor and reduce moth populations. Remove and dispose of damaged fruit to prevent the spread of larvae."
+      },
+      {
+        "id": 17,
+        "name": "Gooseberry Sawfly",
+        "hostPlants": [
+          "Gooseberries", 
+          "Currants"
+        ],
+        "description": "Gooseberry Sawfly larvae are green and feed on the leaves of gooseberries and currants, stripping them bare.",
+        "damage": "The larvae cause defoliation, which can significantly reduce fruiting and weaken the plant.",
+        "tips": "Hand-pick larvae when spotted, and encourage predatory insects such as birds and parasitic wasps to naturally control the population."
+      },
+      {
+        "id": 18,
+        "name": "Crane Fly (Leatherjacket)",
+        "hostPlants": [
+          "Lawns", 
+          "Cereal crops"
+        ],
+        "description": "The larvae, known as leatherjackets, feed on the roots of grass and cereal crops, causing damage.",
+        "damage": "Yellowing of grass and wilting of plants due to root damage caused by the larvae.",
+        "tips": "Apply nematodes to control the larvae population. Encourage predatory birds, which naturally feed on leatherjackets."
+      },
+      {
+        "id": 19,
+        "name": "Cutworm (Turnip Moth)",
+        "hostPlants": [
+          "Cabbage", 
+          "Carrots",
+          "Other vegetables"
+        ],
+        "description": "Moth larvae that cut plant stems at ground level, causing significant damage to young plants.",
+        "damage": "Seedlings die after being cut at the base, leading to early crop loss.",
+        "tips": "Use plant collars around seedlings to prevent larvae from reaching stems. Hand-pick larvae when spotted to reduce infestations."
+      },
+      {
+        "id": 20,
+        "name": "Earwig",
+        "hostPlants": [
+          "Vegetables", 
+          "Flowers"
+        ],
+        "description": "Earwigs are nocturnal insects that feed on flowers and leaves, causing damage to a variety of garden plants.",
+        "damage": "They cause chewing damage to petals and leaves, often leaving ragged edges on affected plants.",
+        "tips": "Trap earwigs using rolled paper or similar objects placed near plants. Remove any potential hiding places like mulch or debris to discourage them."
+      },
+      {
+        "id": 21,
+        "name": "Flea Beetle",
+        "hostPlants": [
+          "Cabbage", 
+          "Radish"
+        ],
+        "description": "Flea beetles are small, jumping beetles that create numerous small holes in leaves, giving them a riddled appearance.",
+        "damage": "The tiny holes left by the beetles reduce the plant's ability to photosynthesize effectively, hindering growth and leading to reduced crop quality.",
+        "tips": "Use floating row covers to protect plants from beetles. Apply neem oil to control their population and limit damage."
+      },
+      {
+        "id": 22,
+        "name": "Fungus Gnat",
+        "hostPlants": [
+          "Houseplants",
+          "Seedlings",
+          "Potted plants"
+        ],
+        "description": "Fungus gnats are small, dark flies about 2-3 mm long. The larvae are translucent, slender worms with black heads, found in the soil. Adults fly around plants, particularly in damp compost.",
+        "damage": "Larvae feed on organic matter in the soil and plant roots, causing seedlings to wilt, grow poorly, or even die. Adults are mostly a nuisance but do not cause direct harm to plants.",
+        "tips": "Allow soil to dry out between waterings to reduce larval survival. Use yellow sticky traps to catch adults. Apply beneficial nematodes (Steinernema feltiae) or *Bacillus thuringiensis* (BTI) to control larvae."
+      },
+      {
+        "id": 23,
+        "name": "Greenhouse Whitefly",
+        "hostPlants": [
+          "Tomatoes",
+          "Cucumbers",
+          "Peppers",
+          "Ornamentals"
+        ],
+        "description": "Greenhouse whiteflies are small, white-winged insects that feed on plant sap. They are commonly found on the undersides of leaves and thrive in warm, protected environments.",
+        "damage": "Their feeding causes yellowing, wilting, and stunted growth in plants. The honeydew they excrete encourages the growth of sooty mold, which covers leaves and reduces photosynthesis.",
+        "tips": "Use yellow sticky traps to monitor and control adult populations. Introduce natural predators like *Encarsia formosa*, a parasitic wasp. Remove infested leaves and improve air circulation to minimize pest development."
+      },
+      {
+        "id": 24,
+        "name": "Horse Chestnut Leaf Miner",
+        "hostPlants": [
+          "Horse Chestnut trees"
+        ],
+        "description": "The Horse Chestnut Leaf Miner is a small moth whose larvae create distinctive brown patches as they mine inside the leaves of horse chestnut trees.",
+        "damage": "Infested leaves develop brown or white blotches, leading to premature leaf drop, which affects the appearance of the tree. However, the overall health of the tree is not typically compromised.",
+        "tips": "Collect and destroy fallen leaves in autumn to reduce the number of overwintering pupae. Pheromone traps can be used to monitor and control adult moth activity."
+      },
+      {
+        "id": 25,
+        "name": "Leaf Miner",
+        "hostPlants": [
+          "Spinach",
+          "Beetroot",
+          "Chard",
+          "Ornamentals"
+        ],
+        "description": "Leaf miners are larvae of various insects, including flies and moths, that tunnel between the upper and lower surfaces of leaves, creating winding trails or blotches. Common species include beet leaf miners and others that affect ornamental plants.",
+        "damage": "Infested leaves develop pale blotches or winding trails, reducing the plant's ability to photosynthesize effectively. This can lead to poor growth and reduced yields, especially in crops like spinach and beetroot.",
+        "tips": "Remove and destroy affected leaves to reduce larval populations. Use floating row covers to prevent adult insects from laying eggs. Encourage natural predators like parasitic wasps or birds, which can help control leaf miner populations."
+      },
+      {
+        "id": 26,
+        "name": "Mealybug",
+        "hostPlants": [
+          "Houseplants",
+          "Citrus",
+          "Orchids",
+          "Succulents"
+        ],
+        "description": "Mealybugs are small, soft-bodied insects that are typically covered with white, cottony wax. They cluster in hidden parts of plants like stems, leaf axils, and undersides of leaves, where they feed on plant sap.",
+        "damage": "Their feeding weakens plants, causing yellowing, wilting, and stunted growth. They excrete honeydew, which encourages the growth of sooty mold and attracts ants.",
+        "tips": "Isolate infested plants to prevent spreading. Wipe the mealybugs off using alcohol-soaked cotton swabs. Apply insecticidal soap or horticultural oil. Introduce natural predators like ladybirds (*Cryptolaemus montrouzieri*) or parasitic wasps to help manage infestations."
+      },
+      {
+        "id": 27,
+        "name": "Millipede",
+        "hostPlants": [
+          "Seedlings",
+          "Strawberries",
+          "Root vegetables"
+        ],
+        "description": "Millipedes are long, segmented creatures with two pairs of legs per body segment. They primarily feed on decaying organic matter but can occasionally cause damage to plants, especially in large numbers. They are generally harmless, contributing to the decomposition of organic material in gardens.",
+        "damage": "Although they typically feed on decaying matter, millipedes may chew on soft roots, seedlings, or fruits like strawberries, leaving holes. This damage is often secondary, occurring after other pests like slugs have initiated the damage.",
+        "tips": "To manage millipedes, reduce excess moisture and remove debris or mulch where they hide. Use traps like rolled-up newspapers or boards to collect and dispose of them. Keeping fruits like strawberries off the soil by using straw can also reduce millipede damage."
+      },
+      {
+        "id": 28,
+        "name": "Onion Root Fly",
+        "hostPlants": [
+          "Onions",
+          "Garlic",
+          "Leeks",
+          "Shallots"
+        ],
+        "description": "Onion root flies resemble small grey houseflies. Their larvae are white, legless maggots that feed on the roots and bulbs of allium crops, causing significant damage.",
+        "damage": "The larvae tunnel into bulbs and stems, leading to yellowing, wilting, and plant death. Damaged bulbs are often susceptible to rot.",
+        "tips": "Use insect-proof mesh or horticultural fleece over crops to prevent egg-laying. Practice crop rotation to minimize future infestations. Promptly remove and destroy affected plants to limit spread."
+      },
+      {
+        "id": 29,
+        "name": "Pea Moth",
+        "hostPlants": [
+          "Peas"
+        ],
+        "description": "Pea moths are small, brown moths with a wingspan of about 15mm. Their larvae feed inside developing pea pods, often only detected at harvest time.",
+        "damage": "The larvae feed on peas inside the pods, leaving frass (excrement) and rendering the peas inedible. This reduces the overall yield.",
+        "tips": "Sow early or late pea varieties to avoid the peak egg-laying period of June and July. Use fine mesh netting to prevent adult moths from laying eggs. Monitor with pheromone traps to track their activity."
+      },
+      {
+        "id": 30,
+        "name": "Red Lily Beetle",
+        "hostPlants": [
+          "Lilies",
+          "Fritillaries"
+        ],
+        "description": "Red lily beetles are bright red, about 8 mm long, with black legs and antennae. The larvae are orange-red with black heads and are often covered in their own excrement, which helps to hide them from predators.",
+        "damage": "Both adults and larvae feed on leaves, stems, flowers, and buds, causing significant defoliation. Heavy infestations can weaken bulbs, reducing their ability to flower in subsequent years.",
+        "tips": "Inspect plants regularly and handpick adults, larvae, and eggs. Remove debris where they can hide, and use approved insecticides only if necessary. Introducing natural predators like parasitoid wasps can help manage populations."
+      },
+      {
+        "id": 31,
+        "name": "Red Spider Mite",
+        "hostPlants": [
+          "Fruit trees",
+          "Vegetables",
+          "Ornamentals",
+          "Houseplants"
+        ],
+        "description": "Red spider mites are tiny, sap-feeding mites, typically red or brown, that thrive in warm, dry conditions. They are often found on the undersides of leaves, where they suck sap, causing damage.",
+        "damage": "Infested plants show speckled yellow or bronze leaves, which can drop prematurely. In severe cases, red spider mite infestations lead to defoliation and reduced plant vigor. Fine webbing may be visible, especially during heavy infestations.",
+        "tips": "Increase humidity around plants to deter mites. Regularly spray plants with water to dislodge mites. Use insecticidal soaps or horticultural oils, and introduce natural predators like *Phytoseiulus persimilis*, a predatory mite, for biological control."
+      },
+      {
+        "id": 32,
+        "name": "Rosemary Leaf Beetle",
+        "hostPlants": [
+          "Rosemary",
+          "Lavender",
+          "Sage"
+        ],
+        "description": "The rosemary leaf beetle is a metallic green and purple striped beetle, approximately 6-7mm long, that feeds on aromatic plants. Both adults and larvae consume the foliage and flowers of plants such as rosemary, lavender, and sage.",
+        "damage": "Feeding by adults and larvae causes noticeable chewing damage to leaves and flowers, sometimes leading to defoliation. However, the damage is generally not severe enough to harm healthy plants.",
+        "tips": "Handpick beetles and larvae when noticed. Prune affected plants to reduce infestations. For large infestations, shake plants over a sheet to collect beetles. Encourage natural predators like birds to help manage the beetle population."
+      },
+      {
+        "id": 33,
+        "name": "Scale Insect",
+        "hostPlants": [
+          "Fruit trees",
+          "Ornamentals"
+        ],
+        "description": "Scale insects are small, sap-feeding insects covered with waxy, shell-like coverings. They range from less than 1mm to over 1cm in diameter and can be found on the stems and undersides of leaves.",
+        "damage": "Feeding on plant sap causes yellowing, stunted growth, and the secretion of honeydew, which leads to sooty mold. In large numbers, they can weaken plants and affect overall plant health.",
+        "tips": "Light infestations can be tolerated, but for heavier infestations, manually scrape off insects. Apply horticultural oil or insecticidal soap to control scale insects. Encourage natural predators like ladybirds and parasitoid wasps to help manage populations."
+      },
+      {
+        "id": 34,
+        "name": "Slug",
+        "hostPlants": [
+          "Lettuce",
+          "Strawberries",
+          "Young seedlings"
+        ],
+        "description": "Slugs are soft-bodied, slimy mollusks that typically feed on tender plants, especially at night. They thrive in damp conditions and often hide in dark, moist areas during the day.",
+        "damage": "Slugs cause significant damage to leaves and stems by chewing ragged holes or completely consuming parts of the plant. They often leave slime trails behind, which can indicate their presence.",
+        "tips": "To manage slug populations, use beer traps, copper tape, or organic slug pellets. Encourage natural predators such as birds, hedgehogs, and ground beetles to help control them. Regularly removing plant debris and using barriers can reduce slug hiding spots and feeding opportunities."
+      },
+      {
+        "id": 35,
+        "name": "Snail",
+        "hostPlants": [
+          "Lettuce",
+          "Cabbage",
+          "Ornamentals"
+        ],
+        "description": "Snails are shelled mollusks that primarily feed on plants at night. They are well-known for their ability to chew large holes in leaves, stems, and flowers, and are often found in moist environments.",
+        "damage": "Snails chew irregular holes in leaves, stems, and flowers, which can lead to severe defoliation and plant death, particularly in younger or more tender plants.",
+        "tips": "Handpick snails during the evening or early morning. Use barriers such as crushed eggshells or copper tape to deter them. Encouraging natural predators like birds, hedgehogs, and frogs can also help manage snail populations."
+      },
+      {
+        "id": 36,
+        "name": "Tomato Leaf Miner",
+        "hostPlants": [
+          "Tomatoes",
+          "Potatoes"
+        ],
+        "description": "The larvae of tomato leaf miners tunnel through leaves, creating blotchy mines that reduce the plant's ability to photosynthesize.",
+        "damage": "The mines caused by the larvae reduce photosynthesis, causing wilting and, in severe cases, can lead to plant death. The damage significantly reduces the yield and quality of tomatoes and potatoes.",
+        "tips": "Remove and destroy infested leaves promptly to limit the spread. Use fine mesh covers to prevent adult moths from laying eggs. Monitor crops with pheromone traps to detect moth activity early."
+      },
+      {
+        "id": 37,
+        "name": "Vine Weevil",
+        "hostPlants": [
+          "Strawberries",
+          "Potted plants"
+        ],
+        "description": "Vine weevils are small black beetles with broad snouts. The larvae are white, legless grubs that feed on the roots of plants, especially those grown in containers.",
+        "damage": "Adult weevils feed on leaves, creating irregular notches, but the larvae cause the most damage by feeding on plant roots, leading to wilting and plant death.",
+        "tips": "Use nematodes (Steinernema kraussei or Heterorhabditis) to control larvae in late summer or early autumn. Handpick adult beetles during the evening, or use sticky traps. Encourage natural predators like birds, frogs, and hedgehogs to help control the population."
+      },
+      {
+        "id": 38,
+        "name": "Wireworm (Click Beetle)",
+        "hostPlants": [
+          "Potatoes",
+          "Root vegetables"
+        ],
+        "description": "Wireworms are the larvae of click beetles, which burrow into roots and tubers. These larvae are yellowish-brown and stiff-bodied, feeding on a variety of plants.",
+        "damage": "Wireworms cause holes and tunnels in root crops such as potatoes and carrots, which can lead to rot and reduced yield.",
+        "tips": "To manage wireworms, use traps like cut potatoes to attract and catch larvae. Practice crop rotation to reduce infestations over time. Encourage natural predators such as birds and ground beetles, and consider using nematodes (*Heterorhabditis bacteriophora*) for biological control."
+      }
+    ]
+  }
+  

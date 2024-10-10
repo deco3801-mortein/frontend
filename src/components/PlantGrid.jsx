@@ -1,34 +1,34 @@
-import PropTypes from "prop-types";
-import PlantItem from "../components/Plant";
-import "../components/PlantGrid";
-import image1 from "../assets/img/1.1.gif";
-import image2 from "../assets/img/5.gif";
-import image3 from "../assets/img/4.gif";
+// import PropTypes from "prop-types";
+// import PlantItem from "../components/Plant";
+// import "../components/PlantGrid";
+// import image1 from "../assets/img/1.1.gif";
+// import image2 from "../assets/img/5.gif";
+// import image3 from "../assets/img/4.gif";
 
-const PlantGrid = (props) => {
-    const plants = props.userData.devices;
-    const plantImages = [image1, image2, image3];
-    let currentImage = 0;
+// const PlantGrid = (props) => {
+//     const plants = props.userData.devices;
+//     const plantImages = [image1, image2, image3];
+//     let currentImage = 0;
 
-    return (
-        <div className="plant-grid">
-            {plants.map((plant) => (
-                <PlantItem
-                    key={plant.id}
-                    id={plant.id}
-                    imageSrc={plantImages[currentImage++ % 3]}
-                    name={plant.name}
-                />
-            ))}
-        </div>
-    );
-};
+//     return (
+//         <div className="plant-grid">
+//             {plants.map((plant) => (
+//                 <PlantItem
+//                     key={plant.id}
+//                     id={plant.id}
+//                     imageSrc={plantImages[currentImage++ % 3]}
+//                     name={plant.name}
+//                 />
+//             ))}
+//         </div>
+//     );
+// };
 
-PlantGrid.propTypes = {
-    userData: PropTypes.object,
-};
+// PlantGrid.propTypes = {
+//     userData: PropTypes.object,
+// };
 
-export default PlantGrid;
+// export default PlantGrid;
 
 // import React from 'react';
 // import PlantItem from './Plant';
@@ -54,3 +54,58 @@ export default PlantGrid;
 // };
 
 // export default PlantGrid;
+
+import React from 'react';
+import PropTypes from "prop-types";
+import PlantItem from "../components/Plant";
+import "../components/PlantGrid.css";
+import image1 from "../assets/img/1.1.gif";
+import image2 from "../assets/img/5.gif";
+import image3 from "../assets/img/4.gif";
+
+const PlantGrid = (props) => {
+    const plants = props.userData.devices;
+    const plantImages = [image1, image2, image3];
+    let currentImage = 0;
+
+    const isParameterHealthy = (type, value) => {
+        switch (type) {
+            case "moisture":
+                return value >= 21 && value <= 40;
+            case "humidity":
+                return value >= 60 && value <= 70;
+            case "temperature":
+                return value >= 21 && value <= 29;
+            case "sunlight":
+                return value >= 50;
+            default:
+                return true;
+        }
+    };
+
+    const hasUnhealthyParameter = (plant) => {
+        return Object.entries(plant.data).some(([key, value]) => !isParameterHealthy(key, value));
+    };
+
+    return (
+        <div className="plant-grid">
+            {plants.map((plant) => (
+                <PlantItem
+                    key={plant.id}
+                    id={plant.id}
+                    imageSrc={plantImages[currentImage++ % 3]}
+                    name={plant.name}
+                    hasIssues={hasUnhealthyParameter(plant)}
+                />
+            ))}
+        </div>
+    );
+};
+
+PlantGrid.propTypes = {
+    userData: PropTypes.shape({
+        devices: PropTypes.arrayOf(PropTypes.object)
+    }),
+};
+
+export default PlantGrid;

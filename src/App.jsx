@@ -7,8 +7,14 @@ import "./pages/Detail.css";
 import SearchPage from "./pages/SearchPage";
 import SearchDetail from "./pages/SearchDetail";
 import Login from "./pages/Login";
+import PestPage from "./pages/PestPage"
+import GuidancePage from "./pages/GuidancePage";
+import PestDetail from './pages/PestDetail'
+import { Device } from "@deco3801-mortein/mortein-sdk/services.gen";
 
 function App() {
+    const devices = Device.getDevice();
+    console.log
     const [userData, setUserData] = useState(null);
 
     // Function to toggle vibration
@@ -49,13 +55,15 @@ function App() {
             <Routes>
                 <Route path="/" element={<HomePage userData={userData} />} />
                 <Route path="/login" element={<Login />} />
+                <Route path="/garden-guidance" element={<GuidancePage />} /> 
                 <Route path="/search" element={<SearchPage />} />
                 <Route path="/search-detail/:id" element={<SearchDetail />} />
+                <Route path="/pest-search" element={<PestPage />} />
+                <Route path="/pest-search/:id" element={<PestDetail />} />
                 <Route
                     path="/detail/:id"
                     element={
-                        userData &&
-                        userData.devices.length > 0 && (
+                        userData && userData.devices && userData.devices.length > 0 && (
                             <Detail userData={userData} toggleVibration={toggleVibration} />
                         )
                     }
