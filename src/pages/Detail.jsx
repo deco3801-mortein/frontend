@@ -67,7 +67,9 @@ function Detail() {
                         <h2>{device.deviceName}</h2>
                     </div>
                     {!currentHealthData && !dataNotFound && <p className="loading">Loading...</p>}
-                    {!currentHealthData && dataNotFound && <p className="data-not-found">Data Not Found</p>}
+                    {!currentHealthData && dataNotFound && (
+                        <p className="data-not-found">Data Not Found</p>
+                    )}
                     {currentHealthData && (
                         <div className="plant-health">
                             <h2 className="plant-health-title">Plant Health</h2>

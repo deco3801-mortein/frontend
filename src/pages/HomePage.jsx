@@ -23,7 +23,9 @@ const HomePage = (props) => {
         <div className="home-page">
             <Header left="Menu" title="My Plants" showGuide={true} />
             {!props.userData && !props.devicesNotFound && <p className="loading">Loading...</p>}
-            {!props.userData && props.devicesNotFound && <p className="devices-not-found">No Devices Found</p>}
+            {!props.userData && props.devicesNotFound && (
+                <p className="devices-not-found">No Devices Found</p>
+            )}
             {props.userData && !props.devicesNotFound && <PlantGrid userData={props.userData} />}
         </div>
     );
