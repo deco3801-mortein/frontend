@@ -12,18 +12,19 @@ import { Device } from "@deco3801-mortein/mortein-sdk/services.gen";
 function App() {
     const [devicesNotFound, setDevicesNotFound] = useState(false);
 
-    const [userData, setUserData] = useState(null);
+    const [devices, setDevices] = useState(null);
 
     useEffect(() => {
         Device.getDevice()
             .then((data) => {
-                setUserData(data);
+                setDevices(data);
             })
             .catch((error) => {
                 console.error(error.message);
                 setDevicesNotFound(true);
             });
     }, []);
+    console.log(devices);
 
     // Function to toggle vibration
 
@@ -53,7 +54,7 @@ function App() {
             <Routes>
                 <Route
                     path="/"
-                    element={<HomePage userData={userData} devicesNotFound={devicesNotFound} />}
+                    element={<HomePage devices={devices} devicesNotFound={devicesNotFound} />}
                 />
                 <Route path="/login" element={<Login />} />
                 <Route path="/search" element={<SearchPage />} />
@@ -61,7 +62,7 @@ function App() {
                 <Route
                     path="/detail/:id"
                     element={
-                        userData && (
+                        devices && (
                             <Detail /> //toggleVibration={toggleVibration} />
                         )
                     }
