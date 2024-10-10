@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import "./SearchBar.css";
-import pestsData from "../data/pest.json"; 
+import pestsData from "../data/pest.json";
 
 export const PestSearch = ({ setResults }) => {
     const [input, setInput] = useState("");
@@ -16,7 +16,7 @@ export const PestSearch = ({ setResults }) => {
             if (input.length >= 2) {
                 // Filter the pests based on the search input
                 const filteredResults = pestsData.pest.filter((pest) =>
-                    pest.name.toLowerCase().includes(input.toLowerCase())
+                    pest.name.toLowerCase().includes(input.toLowerCase()),
                 );
 
                 setResults(filteredResults);
