@@ -11,7 +11,7 @@ import { Device } from "@deco3801-mortein/mortein-sdk/services.gen";
 
 function App() {
 
-    const [devicesNotFound, setDevicesNotFound] = useState(true);
+    const [devicesNotFound, setDevicesNotFound] = useState(false);
 
     const [userData, setUserData] = useState(null);
 
