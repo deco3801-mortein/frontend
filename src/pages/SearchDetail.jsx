@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import "./SearchDetail.css";
 
-const API_KEY = "sk-7NuB66e38c2a660d46837";
+const API_KEY = import.meta.env.VITE_API_KEY;
 
 const SearchDetail = () => {
     const { id } = useParams(); // Get plant ID from URL
