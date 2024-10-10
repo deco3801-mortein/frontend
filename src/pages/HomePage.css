@@ -1,3 +1,9 @@
 .home-page {
     background-color: #fcffe0;
 }
+
+.loading,
+.devices-not-found {
+    padding-left: 3vh;
+    font-size: 1.4rem;
+}

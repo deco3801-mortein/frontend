@@ -12,8 +12,8 @@
 
 .detail {
     background-color: #fdfff2;
-    width: 100vw;
-    height: 100vh;
+    max-width: 100vw;
+    min-height: 100vh;
     background-size: cover;
 }
 
@@ -45,7 +45,14 @@
 }
 
 .loading {
-    padding-left: 30px;
+    padding-left: 3vh;
+    font-size: 1.4rem;
+}
+
+.device-not-found,
+.data-not-found {
+    padding-left: 3vh;
+    font-size: 1.4rem;
 }
 
 .plant-health-title {
