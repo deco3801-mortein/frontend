@@ -6,7 +6,7 @@ import image2 from "../assets/img/5.gif";
 import image3 from "../assets/img/4.gif";
 
 const PlantGrid = (props) => {
-    const plants = props.userData;
+    const plants = props.devices;
     const plantImages = [image1, image2, image3];
     let currentImage = 0;
 
@@ -25,7 +25,7 @@ const PlantGrid = (props) => {
 };
 
 PlantGrid.propTypes = {
-    userData: PropTypes.array,
+    devices: PropTypes.array,
 };
 
 export default PlantGrid;
