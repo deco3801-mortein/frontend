@@ -80,7 +80,7 @@ function Detail() {
                                 <h2 className="vibration-heading">Vibration</h2>
                                 <button
                                     className="vibration-button"
-                                    value={device.id}
+                                    value={device.deviceId}
                                     //onClick={props.toggleVibration}
                                 >
                                     {currentHealthData.isVibrating ? "Off" : "On"}
