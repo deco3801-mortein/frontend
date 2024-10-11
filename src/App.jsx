@@ -7,6 +7,9 @@ import "./pages/Detail.css";
 import SearchPage from "./pages/SearchPage";
 import SearchDetail from "./pages/SearchDetail";
 import Login from "./pages/Login";
+import PestPage from "./pages/PestPage";
+import GuidancePage from "./pages/GuidancePage";
+import PestDetail from "./pages/PestDetail";
 import { Device } from "@deco3801-mortein/mortein-sdk/services.gen";
 
 function App() {
@@ -57,8 +60,11 @@ function App() {
                     element={<HomePage devices={devices} devicesNotFound={devicesNotFound} />}
                 />
                 <Route path="/login" element={<Login />} />
+                <Route path="/garden-guidance" element={<GuidancePage />} />
                 <Route path="/search" element={<SearchPage />} />
                 <Route path="/search-detail/:id" element={<SearchDetail />} />
+                <Route path="/pest-search" element={<PestPage />} />
+                <Route path="/pest-search/:id" element={<PestDetail />} />
                 <Route
                     path="/detail/:id"
                     element={
