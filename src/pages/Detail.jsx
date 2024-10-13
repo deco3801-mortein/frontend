@@ -112,9 +112,7 @@ function Detail() {
                     )}
                     {currentHealthData && (
                         <div className="plant-health">
-                            <div className="title-container">
-                                <h2 className="plant-health-title">Plant Health</h2>
-                            </div>
+                            <h2 className="plant-health-title">Plant Health</h2>
                             <Meter
                                 type="moisture"
                                 level={currentHealthData.moisture}
