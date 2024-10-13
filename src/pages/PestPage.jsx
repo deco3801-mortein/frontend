@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Navbar from "../components/Navbar";
+import Header from "../components/Header";
 import PestSearch from "../components/PestSearch";
 import "../pages/SearchPage.css";
 import pestsData from "../data/pest.json";
@@ -16,7 +16,7 @@ const PestPage = () => {
 
     return (
         <div className="pest-page">
-            <Navbar left="Back" title="Search for a Pest" showGuide={false} />
+            <Header left="Back" title="Search for a Pest" showGuide={false} />
             <PestSearch setResults={setResults} data={pestsData.pest} />
             <ul className="results-list">
                 {results.map((pest) => (
