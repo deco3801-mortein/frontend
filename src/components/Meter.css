@@ -1,0 +1,39 @@
+ .bar-heading {
+    display: flex;
+    align-items: center;
+    gap: 2vh;
+}
+.question-icon {
+    align-items: center;
+    cursor: pointer;
+    color: #d67f7f;
+}
+  
+.level {
+    height: 100%;
+    transition: width 0.5s ease-in-out;
+}
+  
+/* 
+.tip-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+*/
+.tip-content {
+    padding-bottom: 20px;
+    border-radius: 5px;
+    max-width: 80%;
+}
+  
+.tip-content button {
+    align-items: center;
+}

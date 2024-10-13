@@ -12,9 +12,8 @@
 
 .detail {
     background-color: #fdfff2;
-    max-width: 100vw;
-    min-height: 100vh;
-    background-size: cover;
+    width: 100%;
+    min-height: 100%;
 }
 
 .plant-main {
@@ -23,7 +22,6 @@
     align-items: center;
     /* gap: 20px; */
     font-size: 2rem;
-    padding-left: 5vh;
     padding-top: 7vh;
     padding-bottom: 8vh;
     font-family: "PilserBold", sans-serif;
@@ -39,9 +37,9 @@
 
 .plant-health {
     font-family: "PilserBold", sans-serif;
-    padding-left: 10vh;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .loading {
@@ -78,20 +76,9 @@
     position: absolute;
 }
 
-.sunlight .level {
-    background-color: #ededa7;
-}
-
-.moisture .level {
-    background-color: #b0cce8;
-}
-
-.temperature .level {
-    background-color: rgb(247, 166, 242);
-}
-
 .vibration-button {
     align-items: center;
+    margin-top: 0.2vh;
     width: 10vh;
     height: 5vh;
     font-size: 1.5rem;
