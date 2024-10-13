@@ -27,7 +27,6 @@ function App() {
                 setDevicesNotFound(true);
             });
     }, []);
-    console.log(devices);
 
     // Function to toggle vibration
 
