@@ -1,4 +1,4 @@
- .bar-heading {
+.bar-heading {
     display: flex;
     align-items: center;
     gap: 2vh;
@@ -8,12 +8,12 @@
     cursor: pointer;
     color: #d67f7f;
 }
-  
+
 .level {
     height: 100%;
     transition: width 0.5s ease-in-out;
 }
-  
+
 /* 
 .tip-overlay {
     position: fixed;
@@ -33,7 +33,7 @@
     border-radius: 5px;
     max-width: 80%;
 }
-  
+
 .tip-content button {
     align-items: center;
 }

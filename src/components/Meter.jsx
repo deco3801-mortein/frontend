@@ -17,7 +17,7 @@ function Meter({ type, level, color }) {
         } else if (value < 2500) {
             return 3;
         } else if (value < 5000) {
-         return 4;
+            return 4;
         } else if (value < 10000) {
             return 5;
         } else if (value < 20000) {
@@ -61,21 +61,23 @@ function Meter({ type, level, color }) {
                     case 8:
                     case 9:
                     case 10:
-                       return "Optimal for plants requiring direct sunlight";
-                  default:
-                       return "";
+                        return "Optimal for plants requiring direct sunlight";
+                    default:
+                        return "";
                 }
-             case "temperature":
-             if (level < 21)
-                     return "Increase the temperature around your plant. Ideal temperature: 21°-29° C";
-             if (level > 29)
-                     return "Decrease the temperature around your plant. Ideal temperature: 21°-29° C";
-                 return "Ideal temperature: 21°-29° C";
-             default:
-                 return "";
-         }
-     };
-     {console.log(level)}
+            case "temperature":
+                if (level < 21)
+                    return "Increase the temperature around your plant. Ideal temperature: 21°-29° C";
+                if (level > 29)
+                    return "Decrease the temperature around your plant. Ideal temperature: 21°-29° C";
+                return "Ideal temperature: 21°-29° C";
+            default:
+                return "";
+        }
+    };
+    {
+        console.log(level);
+    }
 
     return (
         <div className={type}>
@@ -87,12 +89,15 @@ function Meter({ type, level, color }) {
                 <div
                     className="level"
                     style={{
-                        width: `${type=="sunlight" ? sunlightLevel(level)*10 : level}%`,
+                        width: `${type == "sunlight" ? sunlightLevel(level) * 10 : level}%`,
                         backgroundColor: color,
                     }}
                 ></div>
             </div>
-            <p className="level-label">{type=="sunlight" ? sunlightLevel(level) : level}{type=="moisture" ? "%" : type=="temperature" ? "°C" : ""}</p>
+            <p className="level-label">
+                {type == "sunlight" ? sunlightLevel(level) : level}
+                {type == "moisture" ? "%" : type == "temperature" ? "°C" : ""}
+            </p>
             {showTip && <Tip content={getGuidance()} onClose={() => setShowTip(false)} />}
         </div>
     );
