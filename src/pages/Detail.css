@@ -13,7 +13,7 @@
 .detail {
     background-color: #fdfff2;
     width: 100%;
-    min-height: 100%;
+    min-height: 100vh;
 }
 
 .plant-main {
@@ -37,9 +37,8 @@
 
 .plant-health {
     font-family: "PilserBold", sans-serif;
-    display: flex;
     flex-direction: column;
-    align-items: center;
+    margin-left: 8vh;
 }
 
 .loading {
@@ -58,6 +57,7 @@
     font-size: 2rem;
 }
 
+
 .meter {
     display: flex;
     align-items: center;
@@ -74,6 +74,17 @@
     height: 100%;
     border-radius: 12px;
     position: absolute;
+    transition: width 0.5s ease-in-out;
+}
+
+.bar-heading {
+    display: flex;
+    gap: 2vh;
+    align-items: center;
+}
+.question-icon {
+    cursor: pointer;
+    color: #d67f7f;
 }
 
 .vibration-button {
@@ -86,4 +97,14 @@
 
 .vibration-heading {
     font-size: 2rem;
+}
+
+.tip-content {
+    padding-bottom: 20px;
+    border-radius: 5px;
+    max-width: 90%;
+}
+
+.tip-content button {
+    align-items: center;
 }
