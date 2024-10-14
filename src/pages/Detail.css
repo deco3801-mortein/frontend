@@ -36,9 +36,16 @@
 }
 
 .plant-health {
+    display: flex;
     font-family: "PilserBold", sans-serif;
     flex-direction: column;
-    margin-left: 8vh;
+    align-items: center;
+}
+
+.moisture,
+.sunlight,
+.temperature {
+    max-width: 80vw;
 }
 
 .loading {
