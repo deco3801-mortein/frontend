@@ -19,14 +19,13 @@
 }
 
 .pest-detail-container h2 {
+    padding-top: 2vh;
     align-items: center;
     font-size: 1.5rem;
     color: #4f8453;
-    margin-top: 20px;
 }
 
 .pest-detail-container p {
-    margin-bottom: 9vh;
     margin-left: 5vw;
     text-align: justify;
     width: 90vw;
