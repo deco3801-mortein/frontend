@@ -1,9 +1,8 @@
 /* Container for the entire detail page */
 .search-detail-page {
-    width: 100vw;
-    height: 100vh;
+    max-width: 100vw;
+    min-height: 100vh;
     margin: 0 auto;
-    padding: 20px;
     font-family: "PilserLight", sans-serif;
     background-color: #f8f8f0;
     text-align: center;
@@ -35,12 +34,13 @@
 
 /* Container for plant information */
 .plant-info {
+    margin-left: 9vh;
     margin-top: 3vh;
 }
 
 /* Section for individual plant details */
 .info-section {
-    margin-bottom: 3vh;
+    margin-bottom: 10vh;
     text-align: left;
 }
 
@@ -59,4 +59,9 @@
     color: #333;
     margin: 0;
     font-family: "PilserLight", sans-serif;
+}
+
+.footer-text {
+    font-size: 0.8rem;
+    padding: 2vh;
 }

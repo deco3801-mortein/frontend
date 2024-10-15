@@ -1,18 +1,24 @@
 .search-page {
+    cursor: pointer;
     width: 100vw;
     height: 100vh;
     background-size: cover;
 }
 
+.pest-page {
+    cursor: pointer;
+}
+
 .results-list {
     list-style-type: none;
-    padding: 0;
-    margin: 20px 0;
+    padding-left: 3vh;
+    padding-right: 3vh;
+    margin: 3vh 0;
 }
 
 .result-item {
     border: 1px solid #ccc;
-    padding: 10px;
+    padding: 5vh;
     border-radius: 4px;
     margin-bottom: 10px;
     display: flex;

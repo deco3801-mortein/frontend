@@ -8,8 +8,10 @@
 }
 
 .menu-icon,
-.search-icon {
+.search-icon,
+.back-icon {
     font-size: 4vh;
+    margin: 0;
 }
 
 .title {

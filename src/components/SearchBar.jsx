@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import "./SearchBar.css";
 
@@ -10,7 +10,7 @@ export const SearchBar = ({ setResults }) => {
     const [error, setError] = useState(null);
     useEffect(() => {
         const fetchData = async () => {
-            if (input.length >= 3) {
+            if (input.length >= 2) {
                 setLoading(true);
                 setError(null);
 

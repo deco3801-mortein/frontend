@@ -1,0 +1,41 @@
+.pest-detail-container {
+    text-align: center;
+}
+
+.pest-image-container {
+    margin: 20px auto;
+}
+
+.pest-image {
+    width: 150px;
+    height: 150px;
+}
+
+.pest-detail-container h1.title {
+    text-align: center;
+    font-size: 2rem;
+    color: #4f8453;
+}
+
+.pest-detail-container h2 {
+    padding-top: 2vh;
+    align-items: center;
+    font-size: 1.5rem;
+    color: #4f8453;
+}
+
+.pest-detail-container p {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+    width: 90vw;
+    font-family: "PilserLight", sans-serif;
+    font-size: 1rem;
+    color: #333;
+}
+
+.pest-footer .footer-text {
+    text-align: center;
+    font-size: 0.8rem;
+    padding: 2vh;
+}

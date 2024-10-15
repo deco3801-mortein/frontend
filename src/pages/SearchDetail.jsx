@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import "./SearchDetail.css";
+import Header from "../components/Header";
 
 const API_KEY = import.meta.env.VITE_API_KEY;
 
@@ -28,11 +29,11 @@ const SearchDetail = () => {
     const sunlight = Array.isArray(plantData.sunlight)
         ? plantData.sunlight.join(", ")
         : plantData.sunlight || "Unknown";
-    const scientificName = plantData.scientific_name?.join(", ") || "Unknown";
     const otherName = plantData.other_name?.join(", ") || "Unknown";
 
     return (
         <div className="search-detail-page">
+            <Header left="Back" title="Plant Detail" showGuide={false} />
             <div className="plant-main">
                 <img
                     src={plantData.default_image?.regular_url}
@@ -42,10 +43,6 @@ const SearchDetail = () => {
                 <h1 className="plant-title">{plantData.common_name}</h1>
             </div>
             <div className="plant-info">
-                <div className="info-section">
-                    <h3>Scientific Name:</h3>
-                    <p>{scientificName}</p>
-                </div>
                 <div className="info-section">
                     <h3>Other Name:</h3>
                     <p>{otherName}</p>
@@ -62,6 +59,9 @@ const SearchDetail = () => {
                     <h3>Sunlight:</h3>
                     <p>{sunlight}</p>
                 </div>
+            </div>
+            <div className="plant-footer">
+                <p className="footer-text">Plant information from the Perenual Plant API</p>
             </div>
         </div>
     );
