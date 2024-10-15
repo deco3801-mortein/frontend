@@ -6,7 +6,7 @@ import "./Meter.css";
 
 function Meter({ type, level, color }) {
     const [showTip, setShowTip] = useState(false);
-    
+
     function sunlightLevel(value) {
         if (value < 20) return 0;
         if (value < 250) return 1;
