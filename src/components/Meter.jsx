@@ -6,6 +6,7 @@ import "./Meter.css";
 
 function Meter({ type, level, color }) {
     const [showTip, setShowTip] = useState(false);
+    
     function sunlightLevel(value) {
         if (value < 20) return 0;
         if (value < 250) return 1;
@@ -24,12 +25,12 @@ function Meter({ type, level, color }) {
         switch (type) {
             case "moisture":
                 if (level < 21)
-                    return "Water your plant more frequently. Ideal soil moisture: 21%-40% for non-vegetables, 40%-80% for vegetables";
+                    return "Water your plant more frequently. Ideal soil moisture: 21% - 40% for non-vegetables, 40% - 80% for vegetables";
                 if (level <= 40)
                     return "Water more frequently if plant is a vegetable. Ideal soil moisture for vegetables: 40%-80%";
                 if (level > 40)
                     return "Reduce watering frequency if your plant is not a vegetable. Ideal soil moisture for non-vegetable plants: Between 21% - 40%";
-                return "Reduce watering frequency. Ideal soil moisture: 21%-40% for non-vegetables, 40%-80% for vegetables";
+                return "Reduce watering frequency. Ideal soil moisture: 21% - 40% for non-vegetables, 40% - 80% for vegetables";
             case "sunlight":
                 switch (sunlightLevel(level)) {
                     case 0:
