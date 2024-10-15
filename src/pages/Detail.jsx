@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Device, HealthcheckData } from "@deco3801-mortein/mortein-sdk/services.gen";
 import Meter from "../components/Meter";
+import Graph from "../components/Graph";
 import "../pages/Detail.css";
 import Header from "../components/Navbar";
 import image1 from "../assets/img/1.1.gif";
@@ -34,6 +35,9 @@ function Detail() {
     const [dataNotFound, setDataNotFound] = useState(false);
 
     const [currentHealthData, setCurrentHealthData] = useState(null);
+    const [healthData, setHealthData] = useState(null);
+
+    const [dayGraph, setDayGraph] = useState(false)
 
     useEffect(() => {
         if (device) {
@@ -45,6 +49,13 @@ function Detail() {
                     console.log(error.message);
                     setDataNotFound(true);
                 });
+            HealthcheckData.getDeviceByDeviceIdHealthcheckData(device)
+                .then((data) => {
+                    setHealthData(data);
+                })
+                .catch((error) => {
+                    console.log(error.message);
+                })
         }
     }, [device]);
 
@@ -110,7 +121,12 @@ function Detail() {
                     {!currentHealthData && dataNotFound && (
                         <p className="data-not-found">Data Not Found</p>
                     )}
-                    {currentHealthData && (
+                    {healthData && 
+                        <button className="day-graph-button" onClick={() => setDayGraph(!dayGraph)}>Day</button>
+                    }
+                    {dayGraph && <Graph data={healthData} />}
+
+                    {!dayGraph && currentHealthData && (
                         <div className="plant-health">
                             <h2 className="plant-health-title">Plant Health</h2>
                             <Meter
