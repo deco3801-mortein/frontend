@@ -60,6 +60,9 @@ const SearchDetail = () => {
                     <p>{sunlight}</p>
                 </div>
             </div>
+            <div className="plant-footer">
+                <p className="footer-text">Plant information from the Perenual Plant API</p>
+            </div>
         </div>
     );
 };
