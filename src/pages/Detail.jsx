@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { Device, HealthcheckData } from "@deco3801-mortein/mortein-sdk/services.gen";
+import { Command, Device, HealthcheckData } from "@deco3801-mortein/mortein-sdk/services.gen";
 import Meter from "../components/Meter";
 import "../pages/Detail.css";
 import Header from "../components/Header";
@@ -35,6 +35,8 @@ function Detail() {
 
     const [currentHealthData, setCurrentHealthData] = useState(null);
 
+    const [vibrationToggled, setVibrationToggled] = useState(false);
+
     useEffect(() => {
         if (device) {
             HealthcheckData.getDeviceByDeviceIdHealthcheckDataLatest(device)
@@ -42,11 +44,11 @@ function Detail() {
                     setCurrentHealthData(data);
                 })
                 .catch((error) => {
-                    console.log(error.message);
+                    console.error(error.message);
                     setDataNotFound(true);
                 });
         }
-    }, [device]);
+    }, [device, vibrationToggled]);
 
     // Determine color for meter based on value
     const getColor = (type, value) => {
@@ -114,7 +116,10 @@ function Detail() {
                                 <button
                                     className="vibration-button"
                                     value={device.deviceId}
-                                    //onClick={props.toggleVibration}
+                                    onClick={() => {
+                                        Command.postDeviceByDeviceIdCommandToggle({deviceId: id});
+                                        setVibrationToggled((prev) => !prev);
+                                    }}
                                 >
                                     {currentHealthData.isVibrating ? "Off" : "On"}
                                 </button>
@@ -126,10 +131,5 @@ function Detail() {
         </div>
     );
 }
-
-// Detail.propTypes = {
-//     userData: PropTypes.array,
-//     toggleVibration: PropTypes.func,
-// };
 
 export default Detail;
