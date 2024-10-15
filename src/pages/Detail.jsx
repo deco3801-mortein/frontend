@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { Device, HealthcheckData } from "@deco3801-mortein/mortein-sdk/services.gen";
+import { Command, Device, HealthcheckData } from "@deco3801-mortein/mortein-sdk/services.gen";
 import Meter from "../components/Meter";
 import "../pages/Detail.css";
 import Header from "../components/Header";
@@ -35,14 +35,19 @@ function Detail() {
 
     const [currentHealthData, setCurrentHealthData] = useState(null);
 
+    //const [vibrationToggled, setVibrationToggled] = useState(false);
+
+    const [toggleButtonOn, setToggleButtonOn] = useState(null);
+
     useEffect(() => {
         if (device) {
             HealthcheckData.getDeviceByDeviceIdHealthcheckDataLatest(device)
                 .then((data) => {
                     setCurrentHealthData(data);
+                    setToggleButtonOn(data.isVibrating);
                 })
                 .catch((error) => {
-                    console.log(error.message);
+                    console.error(error.message);
                     setDataNotFound(true);
                 });
         }
@@ -73,6 +78,15 @@ function Detail() {
                 return brightYellow;
             default:
                 return "#bdbdbd";
+        }
+    };
+
+    const toggleVibration = async () => {
+        try {
+            await Command.postDeviceByDeviceIdCommandToggle({ deviceId: id });
+            setToggleButtonOn((prev) => !prev);
+        } catch (error) {
+            console.error(error);
         }
     };
 
@@ -112,12 +126,17 @@ function Detail() {
                             <div className="vibration">
                                 <h2 className="vibration-heading">Vibration</h2>
                                 <button
-                                    className="vibration-button"
+                                    className={
+                                        toggleButtonOn
+                                            ? "vibration-container-on"
+                                            : "vibration-container-off"
+                                    }
                                     value={device.deviceId}
-                                    //onClick={props.toggleVibration}
+                                    onClick={() => toggleVibration()}
                                 >
-                                    {currentHealthData.isVibrating ? "Off" : "On"}
+                                    <div className="vibration-button"></div>
                                 </button>
+                                <p>{`Vibration is currently ${toggleButtonOn ? "on" : "off"}`}</p>
                             </div>
                         </div>
                     )}
@@ -126,10 +145,5 @@ function Detail() {
         </div>
     );
 }
-
-// Detail.propTypes = {
-//     userData: PropTypes.array,
-//     toggleVibration: PropTypes.func,
-// };
 
 export default Detail;
