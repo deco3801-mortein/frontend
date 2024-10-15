@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { Device, HealthcheckData } from "@deco3801-mortein/mortein-sdk/services.gen";
 import Meter from "../components/Meter";
 import "../pages/Detail.css";
-import Header from "../components/Navbar";
+import Header from "../components/Header";
 import image1 from "../assets/img/1.1.gif";
 
 // Function for main portion of detail page.

@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import pestData from "../data/pest.json";
 import "./PestDetail.css";
-import Navbar from "../components/Navbar";
+import Header from "../components/Header";
 
 const PestDetail = () => {
     const { id } = useParams();
@@ -13,7 +13,7 @@ const PestDetail = () => {
 
     return (
         <div>
-            <Navbar left="Back" title="Search for a Pest" showGuide={false} />
+            <Header left="Back" title="Search for a Pest" showGuide={false} />
             <div className="pest-detail-container">
                 <div>
                     <h1 className="title">{pest.name}</h1>
