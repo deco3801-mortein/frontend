@@ -81,7 +81,6 @@ function Detail() {
         }
     };
 
-
     const toggleVibration = async () => {
         try {
             await Command.postDeviceByDeviceIdCommandToggle({ deviceId: id });
