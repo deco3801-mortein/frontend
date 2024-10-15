@@ -12,21 +12,23 @@ const PestDetail = () => {
     }
 
     return (
-        <div className="pest-detail-container">
+        <div>
             <Navbar left="Back" title="Search for a Pest" showGuide={false} />
-            <div>
-                <h2 className="title">{pest.name}</h2>
-            </div>
-            <div className="pest-content">
-                <div className="pest-image-container">
-                    <img src="/path/to/your/image.png" alt={pest.name} className="pest-image" />
+            <div className="pest-detail-container">
+                <div>
+                    <h1 className="title">{pest.name}</h1>
                 </div>
-                <h2>Description</h2>
-                <p>{pest.description}</p>
-                <h2>Damage</h2>
-                <p>{pest.damage}</p>
-                <h2>Tips</h2>
-                <p>{pest.tips}</p>
+                <div className="pest-content">
+                    <div className="pest-image-container">
+                        <img src="/path/to/your/image.png" alt={pest.name} className="pest-image" />
+                    </div>
+                    <h2>Description</h2>
+                    <p>{pest.description}</p>
+                    <h2>Damage</h2>
+                    <p>{pest.damage}</p>
+                    <h2>Tips</h2>
+                    <p>{pest.tips}</p>
+                </div>
             </div>
         </div>
     );
