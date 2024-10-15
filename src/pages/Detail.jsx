@@ -78,6 +78,19 @@ function Detail() {
         }
     };
 
+    const toggleVibration = async () => {
+        try {
+            await Command.postDeviceByDeviceIdCommandToggle({ deviceId: id });
+            setTimeout(() => {
+                setVibrationToggled((prev) => !prev);
+                console.log("toggled");
+            }, 1000);
+            console.log("pressed");
+        } catch (error) {
+            console.error(error);
+        }
+    };
+
     return (
         <div className="detail">
             <Header left="Back" title="Detail" showGuide={true} />
@@ -114,15 +127,17 @@ function Detail() {
                             <div className="vibration">
                                 <h2 className="vibration-heading">Vibration</h2>
                                 <button
-                                    className="vibration-button"
+                                    className={
+                                        currentHealthData.isVibrating
+                                            ? "vibration-container-on"
+                                            : "vibration-container-off"
+                                    }
                                     value={device.deviceId}
-                                    onClick={() => {
-                                        Command.postDeviceByDeviceIdCommandToggle({deviceId: id});
-                                        setVibrationToggled((prev) => !prev);
-                                    }}
+                                    onClick={() => toggleVibration()}
                                 >
-                                    {currentHealthData.isVibrating ? "Off" : "On"}
+                                    <div className="vibration-button"></div>
                                 </button>
+                                <p>{`Vibration is currently ${currentHealthData.isVibrating ? "on" : "off"}`}</p>
                             </div>
                         </div>
                     )}

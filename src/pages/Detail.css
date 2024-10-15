@@ -93,12 +93,50 @@
     color: #d67f7f;
 }
 
-.vibration-button {
+.vibration {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    margin-top: 0.2vh;
-    width: 10vh;
-    height: 5vh;
-    font-size: 1.5rem;
+}
+
+.vibration-container-off {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 80px;
+    height: 30px;
+    background-color: lightgreen;
+    border-radius: 25px;
+    position: relative;
+    border: 1.5px solid black;
+}
+
+.vibration-container-on {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 80px;
+    height: 30px;
+    background-color: rgb(1, 146, 1);
+    border-radius: 25px;
+    position: relative;
+    border: 1.5px solid black;
+}
+
+.vibration-button {
+    margin: 0;
+    width: 30%;
+    background-color: white;
+    border: 1.5px solid black;
+    height: 80%;
+    border-radius: 25px;
+    position: absolute;
+}
+
+.vibration-status {
+    font-size: 2rem;
 }
 
 .vibration-heading {
