@@ -35,20 +35,23 @@ function Detail() {
 
     const [currentHealthData, setCurrentHealthData] = useState(null);
 
-    const [vibrationToggled, setVibrationToggled] = useState(false);
+    //const [vibrationToggled, setVibrationToggled] = useState(false);
+
+    const [toggleButtonOn, setToggleButtonOn] = useState(null);
 
     useEffect(() => {
         if (device) {
             HealthcheckData.getDeviceByDeviceIdHealthcheckDataLatest(device)
                 .then((data) => {
                     setCurrentHealthData(data);
+                    setToggleButtonOn(data.isVibrating);
                 })
                 .catch((error) => {
                     console.error(error.message);
                     setDataNotFound(true);
                 });
         }
-    }, [device, vibrationToggled]);
+    }, [device]);
 
     // Determine color for meter based on value
     const getColor = (type, value) => {
@@ -78,14 +81,11 @@ function Detail() {
         }
     };
 
+
     const toggleVibration = async () => {
         try {
             await Command.postDeviceByDeviceIdCommandToggle({ deviceId: id });
-            setTimeout(() => {
-                setVibrationToggled((prev) => !prev);
-                console.log("toggled");
-            }, 1000);
-            console.log("pressed");
+            setToggleButtonOn((prev) => !prev);
         } catch (error) {
             console.error(error);
         }
@@ -128,7 +128,7 @@ function Detail() {
                                 <h2 className="vibration-heading">Vibration</h2>
                                 <button
                                     className={
-                                        currentHealthData.isVibrating
+                                        toggleButtonOn
                                             ? "vibration-container-on"
                                             : "vibration-container-off"
                                     }
@@ -137,7 +137,7 @@ function Detail() {
                                 >
                                     <div className="vibration-button"></div>
                                 </button>
-                                <p>{`Vibration is currently ${currentHealthData.isVibrating ? "on" : "off"}`}</p>
+                                <p>{`Vibration is currently ${toggleButtonOn ? "on" : "off"}`}</p>
                             </div>
                         </div>
                     )}
