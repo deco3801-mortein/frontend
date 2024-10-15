@@ -12,7 +12,7 @@ const PestDetail = () => {
     }
 
     return (
-        <div>
+        <div className="pest-detail-page">
             <Header left="Back" title="Search for a Pest" showGuide={false} />
             <div className="pest-detail-container">
                 <div>
@@ -28,6 +28,11 @@ const PestDetail = () => {
                     <p>{pest.damage}</p>
                     <h2>Tips</h2>
                     <p>{pest.tips}</p>
+                </div>
+                <div className="pest-footer">
+                    <p className="footer-text">
+                        Pest Information gathered from GrowVeg and the RHS Biodiversity Database
+                    </p>
                 </div>
             </div>
         </div>

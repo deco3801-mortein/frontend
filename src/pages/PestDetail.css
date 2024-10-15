@@ -9,7 +9,6 @@
 .pest-image {
     width: 150px;
     height: 150px;
-    border-radius: 50%;
 }
 
 .pest-detail-container h1.title {
@@ -26,10 +25,17 @@
 }
 
 .pest-detail-container p {
-    margin-left: 5vw;
+    margin-left: auto;
+    margin-right: auto;
     text-align: justify;
     width: 90vw;
     font-family: "PilserLight", sans-serif;
     font-size: 1rem;
     color: #333;
+}
+
+.pest-footer .footer-text {
+    text-align: center;
+    font-size: 0.8rem;
+    padding: 2vh;
 }
