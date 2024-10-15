@@ -7,29 +7,17 @@ import "./Meter.css";
 function Meter({ type, level, color }) {
     const [showTip, setShowTip] = useState(false);
     function sunlightLevel(value) {
-        if (value < 20) {
-            return 0;
-        } else if (value < 250) {
-            return 1;
-        } else if (value < 800) {
-            return 2;
-        } else if (value < 2500) {
-            return 3;
-        } else if (value < 5000) {
-            return 4;
-        } else if (value < 10000) {
-            return 5;
-        } else if (value < 20000) {
-            return 6;
-        } else if (value < 30000) {
-            return 7;
-        } else if (value < 45000) {
-            return 8;
-        } else if (value < 65535) {
-            return 9;
-        } else {
-            return 10;
-        }
+        if (value < 20) return 0;
+        if (value < 250) return 1;
+        if (value < 800) return 2;
+        if (value < 2500) return 3;
+        if (value < 5000) return 4;
+        if (value < 10000) return 5;
+        if (value < 20000) return 6;
+        if (value < 30000) return 7;
+        if (value < 45000) return 8;
+        if (value < 65535) return 9;
+        return 10;
     }
 
     const getGuidance = () => {
