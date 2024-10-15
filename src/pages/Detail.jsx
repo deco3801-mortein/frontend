@@ -48,48 +48,29 @@ function Detail() {
         }
     }, [device]);
 
-    //const device = props.userData.devices[id];
-    // Data from API to be displayed
-    /**const moistureData = device.data.moisture;
-    const sunlightData = device.data.sunlight;
-
-    const plantImages = [image1, image2, image3];
-    **/
     // Determine color for meter based on value
     const getColor = (type, value) => {
         const healthyGreen = "#4caf50";
         const unhealthyRed = "#e57373";
-        const lightBlue = "#11a1fa";
-        const darkBlue = "#175b85";
+        const indoorBlue = "#2e8af2";
+        const lightBlue = "#61a9fa";
         const turquoise = "#1bf2c0";
-        const lightGreen = "1bf26d";
+        const lightGreen = "#1bf26d";
         const brightYellow = "#e6ff03";
 
         switch (type) {
             case "moisture":
-                if (value < 21 || value > 80) {
-                    return unhealthyRed;
-                } else if (value > 40) {
-                    return lightBlue;
-                } else {
-                    return healthyGreen;
-                }
+                if (value < 21 || value > 80) return unhealthyRed;
+                if (value > 40) return lightBlue;
+                return healthyGreen;
             case "temperature":
                 return value >= 21 && value <= 29 ? healthyGreen : unhealthyRed;
             case "sunlight":
-                if (value < 20) {
-                    return darkBlue;
-                } else if (value < 250) {
-                    return lightBlue;
-                } else if (value < 2500) {
-                    return turquoise;
-                } else if (value < 10000) {
-                    return lightGreen;
-                } else if (value < 30000) {
-                    return healthyGreen;
-                } else {
-                    return brightYellow;
-                }
+                if (value < 250) return indoorBlue;
+                if (value < 2500) return lightBlue;
+                if (value < 10000) return turquoise;
+                if (value < 30000) return lightGreen;
+                return brightYellow;
             default:
                 return "#bdbdbd";
         }
