@@ -10,14 +10,15 @@ const PlantGrid = (props) => {
     const plantImages = [image1, image2, image3];
     let currentImage = 0;
 
+    const names = ["Tomato Plant", "Kitchen Palm", "Orange Tree", "Lemon Tree", "Geranium", "Rose", "Outdoor Palm", "Cactus"];
     return (
         <div className="plant-grid">
             {plants.map((plant) => (
                 <PlantItem
                     key={plant.id}
                     id={plant.id}
-                    imageSrc={plantImages[currentImage++ % 3]}
-                    name={plant.name}
+                    imageSrc={plantImages[currentImage % 3]}
+                    name={names[currentImage++]}
                 />
             ))}
         </div>
