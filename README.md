@@ -46,7 +46,7 @@ Beyond pest control, VibeGrow monitors crucial plant health metrics (soil moistu
    - Clone or download the frontend repository to your local machine. 
    - Authenticate with npm registry (link for help: https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry)
    - Ensure your token is stored in your environment variables with the name NPM_AUTH
-   - Get an API key for perenual.com so you can access the plant guide information and store it in VITE_API_KEY in environment variables
+   - Get an API key for [perenual.com](https://perenual.com/docs/api) so you can access the plant guide information and store it in VITE_API_KEY in environment variables
    - Run npm install in the terminal
    - Run npm run build
    - The created dist file can then be deployed using any web hosting service (such as AWS Amplify)
