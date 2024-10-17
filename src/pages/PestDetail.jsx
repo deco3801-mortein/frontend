@@ -1,8 +1,15 @@
 import { useParams } from "react-router-dom";
 import pestData from "../data/pest.json";
-import "./PestDetail.css";
 import Header from "../components/Header";
+import "./PestDetail.css";
 
+/**
+ * Component for the Pest Detail page.
+ * The pest detail page is the page which opens when you click a pest from
+ * from the results of your search on the pest page.
+ *
+ * @returns {ReactNode} react element to render the pest detail page
+ */
 const PestDetail = () => {
     const { id } = useParams();
     const pest = pestData.pest.find((p) => p.id === parseInt(id, 10));

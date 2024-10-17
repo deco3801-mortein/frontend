@@ -1,9 +1,17 @@
 import { useNavigate } from "react-router-dom";
-import "./GuidancePage.css";
 import Header from "../components/Header";
-import plantImagePath from "../assets/img/plant.gif";
-import pestImagePath from "../assets/img/pest.gif";
+import plantImagePath from "../assets/img/plant.gif"; // © alekseyvanin / Adobe Stock
+import pestImagePath from "../assets/img/pest.gif"; // © Alexandra Gl / Adobe Stock
+import "./GuidancePage.css";
 
+/**
+ * Component for the Guidance page.
+ * Guidance page is the page which opens when the search icon is clicked
+ * from the home page and detail pages.
+ * From this page, either pest or plant guides can be selected.
+ *
+ * @returns {ReactNode} react element to render the guidance page
+ */
 const GuidancePage = () => {
     const navigate = useNavigate();
 

@@ -2,11 +2,16 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Command, Device, HealthcheckData } from "@deco3801-mortein/mortein-sdk/services.gen";
 import Meter from "../components/Meter";
-import "../pages/Detail.css";
 import Header from "../components/Header";
-import image1 from "../assets/img/1.1.gif";
+import image1 from "../assets/img/1.1.gif"; // © Good Studio / Adobe Stock
+import "../pages/Detail.css";
 
-// Function for main portion of detail page.
+/**
+ * Component for the detail page.
+ * Detail page includes device health readings and vibration control toggle.
+ *
+ * @returns {ReactNode} react element to render the detail page
+ */
 function Detail() {
     const { id } = useParams();
 
@@ -31,14 +36,16 @@ function Detail() {
             });
     }, [id]);
 
+    // stores whether data has been retrieved from the server
     const [dataNotFound, setDataNotFound] = useState(false);
 
     const [currentHealthData, setCurrentHealthData] = useState(null);
 
-    //const [vibrationToggled, setVibrationToggled] = useState(false);
-
+    // stores whether the toggle button rendered to the detail page
+    // should be in the on or off position
     const [toggleButtonOn, setToggleButtonOn] = useState(null);
 
+    // retrieve current health data from the API
     useEffect(() => {
         if (device) {
             HealthcheckData.getDeviceByDeviceIdHealthcheckDataLatest(device)
@@ -81,6 +88,8 @@ function Detail() {
         }
     };
 
+    // Function to toggle vibration
+    // Sends post request to API and toggles the button rendered to the detail page
     const toggleVibration = async () => {
         try {
             await Command.postDeviceByDeviceIdCommandToggle({ deviceId: id });

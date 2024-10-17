@@ -1,12 +1,21 @@
 import { useState } from "react";
-import PropTypes from "prop-types";
 import { FaQuestionCircle } from "react-icons/fa";
+import PropTypes from "prop-types";
 import Tip from "./Tip";
 import "./Meter.css";
 
+/**
+ * Component for the meters used in the detail page.
+ *
+ * @param {string} type the type of meter (sunlight, moisture or temperature)
+ * @param {string} level the number to be displayed on the meter
+ * @param {bool} color the color meter's level
+ * @returns {ReactNode} react element to render the meter
+ */
 function Meter({ type, level, color }) {
     const [showTip, setShowTip] = useState(false);
 
+    // calculate the level of sunlight from the value given
     function sunlightLevel(value) {
         if (value < 20) return 0;
         if (value < 250) return 1;
@@ -21,6 +30,7 @@ function Meter({ type, level, color }) {
         return 10;
     }
 
+    // function to return the comment that is displayed when the question mark icon is clicked
     const getGuidance = () => {
         switch (type) {
             case "moisture":

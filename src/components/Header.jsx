@@ -1,23 +1,15 @@
-// import "../components/Header.css";
-// import { Link } from "react-router-dom";
-
-// const Header = (props) => {
-//     return (
-//         <header className="header">
-//             <div className="menu-icon">&#9776;</div>
-//             <h1 className="title">{props.title}</h1>
-//             <Link to="/SearchPage">
-//                 <div className="search-icon">&#128269;</div>
-//             </Link>
-//         </header>
-//     );
-// };
-
-// export default Header;
-import PropTypes from "prop-types";
 import { useNavigate } from "react-router-dom"; // Import useNavigate for navigation
+import PropTypes from "prop-types";
 import "../components/Header.css";
 
+/**
+ * Component for the header used in all pages except the login page.
+ *
+ * @param {string} left what should be on the left side of the header
+ * @param {string} title what should be on the right side of the header
+ * @param {bool} showGuide if the guide button and link should be displayed on the right side
+ * @returns {ReactNode} react element to render the header
+ */
 const Header = (props) => {
     const navigate = useNavigate(); // Initialize the navigation hook
 
@@ -30,7 +22,7 @@ const Header = (props) => {
     };
 
     const handleBackClick = () => {
-        navigate(-1);
+        navigate(-1); // Navigate to the last page when the icon is clicked
     };
 
     const clickLeftFunction = props.left == "Back" ? handleBackClick : handleMenuClick;

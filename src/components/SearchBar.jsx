@@ -1,9 +1,16 @@
 import { useEffect, useState } from "react";
 import { FaSearch } from "react-icons/fa";
+import PropTypes from "prop-types";
 import "./SearchBar.css";
 
 const API_KEY = import.meta.env.VITE_API_KEY;
 
+/**
+ * Component for the search bar of the plant page
+ *
+ * @param {string} setResults function to set the state of results
+ * @returns {ReactNode} react element to render the search bar for plants
+ */
 export const SearchBar = ({ setResults }) => {
     const [input, setInput] = useState("");
     const [loading, setLoading] = useState(false);
@@ -65,4 +72,8 @@ export const SearchBar = ({ setResults }) => {
             )}
         </>
     );
+};
+
+SearchBar.propTypes = {
+    setResults: PropTypes.func,
 };
