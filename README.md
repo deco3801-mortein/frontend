@@ -7,7 +7,7 @@
 
 ---
 
-<p > This is the guidance of how to rebuild our project.</p>
+<p > Guide to rebuild our project.</p>
 
 ## 🌺 Table of Contents
 
@@ -29,45 +29,37 @@ Beyond pest control, VibeGrow monitors crucial plant health metrics (soil moistu
 - 💫 **Customized Homepage**: Displays all user plants with names and icons for quick identification.
 - 💫 **Real-Time Plant Health Monitoring:** Three progress bars (temperature, light exposure, soil moisture) provide at-a-glance health status.
 - 💫 **Detailed Garden Guidance:** Separate search functionalities for plants and pests, offering cultivation tips and pest control advice.
+  - Pest information gathered from [The Royal Horticultural Society](https://www.rhs.org.uk/biodiversity) and [GrowVeg](https://www.growveg.com.au/pests/australia-and-nz/).
+  - Plant information retrieved from the [Perenual Plant API](https://perenual.com/docs/api).
 
 ## 🙉 Getting Started <a name = "getting_started"></a>
+All code for this project can be found [here](https://github.com/deco3801-mortein).
 
-### ✨Prerequisites
+### ✨Rebuilding the the Web Application
+   - Clone or download the [frontend repository](https://github.com/deco3801-mortein/frontend) to your local machine. 
+   - Open the project folder using your preferred code editor
+   - Add the following environment variables to your environment (these will give you access to our sdk package and the Perenual API for the plant guide):
 
-1. **Device Setup**:
-   - Assemble the monitoring device with required sensors and ESP32 microcontroller.
-   - Ensure proper connection and calibration of all components.
+      ```NPM_AUTH=<your personal access token>```
 
-2. **Server Setup**:
-   - Configure the backend server to receive and process data from the device via WiFi.
-   - Set up the database for storing plant and user information.
+      ```VITE_API_KEY=<your perenual plant API key>```
 
-3. **Web Application - Running the Code**:
-   - Clone or download the frontend repository to your local machine. 
-   - Authenticate with npm registry (link for help: https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry)
-   - Ensure your token is stored in your environment variables with the name NPM_AUTH
-   - Get an API key for [perenual.com](https://perenual.com/docs/api) so you can access the plant guide information and store it in VITE_API_KEY in environment variables
-   - Run npm install in the terminal
-   - Run npm run build
+     - To get the NPM_AUTH token:
+       - Contact us to for access to install our package
+       - Authenticate with npm registry using a personal access token (link for help: https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry)
+     - To get the VITE_API_KEY: 
+       - Create an account and ask for a key from [perenual.com](https://perenual.com/docs/api).
+   - In your terminal, navigate to the cloned or downloaded frontend repository folder and run the following commands:
+     - ```npm install```
+     - ```npm run build```
    - The created dist file can then be deployed using any web hosting service (such as AWS Amplify)
    - You will need to give the hosting service your Perenual API key
 
-4. **Accessing Our Deployed Web Application**:
+- **Accessing Our Deployed Web Application**:
    - Go to https://vibegrow.pro to see our deployed website using AWS Amplify
 
 
 ## 🐜 Built Using <a name = "built_using"></a>
 
-- **Frontend** - React, Vite, AWS Amplify, Perenual Plant API
-- **Backend** - AWS IoT Core MQTT Broker, an RDS Database
-- **Embedded Develpoment** - ESP32 microcontroller (Arduino Uno ESP32), Capacitive Soil Moisture Sensor,
-
-## ✍️ Authors <a name = "authors"></a>
-
-- ✨**Amelia Caddie** - Frontend Development
-- ✨**Denzel Strauss** - Backend Development
-- ✨**Dominic Pincus** - Embedded Develpoment
-- ✨**Michael Jones** - Embedded Develpoment
-- ✨**Mingkun Li** - UI design & Frontend Development
-- ✨**William Sawyer** - Backend Development
+React, Vite, AWS Amplify, Perenual Plant API
 
