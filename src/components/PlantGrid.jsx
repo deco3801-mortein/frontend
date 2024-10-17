@@ -1,13 +1,22 @@
 import PropTypes from "prop-types";
 import PlantItem from "../components/Plant";
 import "../components/PlantGrid";
-import image1 from "../assets/img/1.1.gif";
-import image2 from "../assets/img/5.gif";
-import image3 from "../assets/img/4.gif";
+import image1 from "../assets/img/1.1.gif"; // © Good Studio / Adobe Stock
+import image2 from "../assets/img/5.gif"; // © Good Studio / Adobe Stock
+import image3 from "../assets/img/4.gif"; // © Good Studio / Adobe Stock
 
+/**
+ * Component for the grid of plants on the home page.
+ *
+ * @param {array} devices the devices to be displayed in the grid
+ * @returns {ReactNode} react element to render the plant grid
+ */
 const PlantGrid = (props) => {
     const plants = props.devices;
+
+    // plant images to be used for the devices
     const plantImages = [image1, image2, image3];
+    // used to store the current image index for the plantImages array
     let currentImage = 0;
 
     return (
@@ -29,28 +38,3 @@ PlantGrid.propTypes = {
 };
 
 export default PlantGrid;
-
-// import React from 'react';
-// import PlantItem from './Plant';
-// import './PlantGrid.css';
-
-// const PlantGrid = () => {
-//     const plants = [
-//         { id: 1, imageSrc: require('./src/assets/img/1.1.gif'), name: 'Plant 1' },
-//         { id: 2, imageSrc: require('./src/assets/img/1.1.gif'), name: 'Plant 2' },
-//         { id: 3, imageSrc: require('./src/assets/img/1.1.gif'), name: 'Plant 3' },
-//         { id: 4, imageSrc: require('./src/assets/img/1.1.gif'), name: 'Plant 4' },
-//         { id: 5, imageSrc: require('./src/assets/img/1.1.gif'), name: 'Plant 5' },
-//         { id: 6, imageSrc: require('./src/assets/img/1.1.gif'), name: 'Plant 6' },
-//     ];
-
-//     return (
-//         <div className="plant-grid">
-//             {plants.map(plant => (
-//                 <PlantItem key={plant.id} id={plant.id} imageSrc={plant.imageSrc} name={plant.name} />
-//             ))}
-//         </div>
-//     );
-// };
-
-// export default PlantGrid;

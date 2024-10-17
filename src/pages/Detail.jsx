@@ -3,15 +3,15 @@ import { useEffect, useState } from "react";
 import { Command, Device, HealthcheckData } from "@deco3801-mortein/mortein-sdk/services.gen";
 import Meter from "../components/Meter";
 import Header from "../components/Header";
-import image1 from "../assets/img/1.1.gif";
+import image1 from "../assets/img/1.1.gif"; // © Good Studio / Adobe Stock
 import "../pages/Detail.css";
 
-/** 
+/**
  * Component for the detail page.
  * Detail page includes device health readings and vibration control toggle.
- * 
+ *
  * @returns {ReactNode} react element to render the detail page
-*/
+ */
 function Detail() {
     const { id } = useParams();
 

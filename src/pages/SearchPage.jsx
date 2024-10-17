@@ -4,6 +4,14 @@ import { SearchBar } from "../components/SearchBar";
 import Header from "../components/Header";
 import "../pages/SearchPage.css";
 
+/**
+ * Component for the Search page.
+ * The search page opens when you click a pest from the results of
+ * your search on the plant page.
+ * The information on this page is retrieved from the Perenual Plant API.
+ *
+ * @returns {ReactNode} react element to render the pest detail page
+ */
 const SearchPage = () => {
     const [results, setResults] = useState([]);
     const navigate = useNavigate(); // Initialize navigate hook

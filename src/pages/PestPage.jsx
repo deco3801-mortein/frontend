@@ -5,6 +5,14 @@ import PestSearch from "../components/PestSearch";
 import "../pages/SearchPage.css";
 import pestsData from "../data/pest.json";
 
+/**
+ * Component for the Pest page.
+ * The pest page is the page which opens when the pest icon is clicked
+ * from the guidance page.
+ * From this page, you can search for common pests to get information.
+ *
+ * @returns {ReactNode} react element to render the pest page
+ */
 const PestPage = () => {
     const [results, setResults] = useState([]);
     const navigate = useNavigate();

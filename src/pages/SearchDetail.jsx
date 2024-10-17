@@ -1,10 +1,19 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import "./SearchDetail.css";
 import Header from "../components/Header";
+import "./SearchDetail.css";
 
+// Perenual API key imported from .env file
 const API_KEY = import.meta.env.VITE_API_KEY;
 
+/**
+ * Component for the Search Detail page.
+ * The search detail page is the page which opens when you click
+ * the plant icon from the guidance page.
+ * On this page you can search for plants from the Perenual Plant API.
+ *
+ * @returns {ReactNode} react element to render the pest detail page
+ */
 const SearchDetail = () => {
     const { id } = useParams();
     const [plantData, setPlantData] = useState(null);

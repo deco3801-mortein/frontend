@@ -1,8 +1,15 @@
 import { useState } from "react";
 import { FaSearch } from "react-icons/fa";
-import "./SearchBar.css";
+import PropTypes from "prop-types";
 import pestsData from "../data/pest.json";
+import "./SearchBar.css";
 
+/**
+ * Component for the search bar of the pest page
+ *
+ * @param {string} setResults function to set the state of results
+ * @returns {ReactNode} react element to render the search bar for pests
+ */
 export const PestSearch = ({ setResults }) => {
     const [input, setInput] = useState("");
     const [loading, setLoading] = useState(false);
@@ -58,6 +65,10 @@ export const PestSearch = ({ setResults }) => {
             )}
         </>
     );
+};
+
+PestSearch.propTypes = {
+    setResults: PropTypes.func,
 };
 
 export default PestSearch;

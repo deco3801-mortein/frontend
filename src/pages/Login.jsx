@@ -1,5 +1,13 @@
 import { Link } from "react-router-dom";
 import "./Login.css";
+
+/**
+ * Component for the login page.
+ * Login page is a mock up for user to login to their profile.
+ * No authentication has been implemented at this stage.
+ *
+ * @returns {ReactNode} react element to render the detail page
+ */
 function Login() {
     return (
         <div className="login-page">

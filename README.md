@@ -64,3 +64,11 @@ All code for this project can be found [here](https://github.com/deco3801-mortei
 ## 🐜 Built Using <a name = "built_using"></a>
 
 React, Vite, AWS Amplify, Perenual Plant API
+
+## Images Used
+
+-   GuidancePage.jsx
+    -   Plant in flower pot icon. © [alekseyvanin](https://stock.adobe.com/au/contributor/206204820/alekseyvanin?load_type=author&prev_url=detail) / Adobe Stock
+    -   Vector set of icons with insects for pest control business. © [Alexandra Gl](https://stock.adobe.com/au/contributor/201966471/alexandra-gl?load_type=author&prev_url=detail) / Adobe Stock
+-   HomePage.jsx
+    -   Set of trendy potted plants for home. © [Good Studio](https://stock.adobe.com/au/contributor/206710010/good-studio?load_type=author&prev_url=detail) / Adobe Stock

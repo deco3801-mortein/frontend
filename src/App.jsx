@@ -43,14 +43,7 @@ function App() {
                 <Route path="/search-detail/:id" element={<SearchDetail />} />
                 <Route path="/pest-search" element={<PestPage />} />
                 <Route path="/pest-search/:id" element={<PestDetail />} />
-                <Route
-                    path="/detail/:id"
-                    element={
-                        devices && (
-                            <Detail />
-                        )
-                    }
-                />
+                <Route path="/detail/:id" element={devices && <Detail />} />
             </Routes>
         </Router>
     );
