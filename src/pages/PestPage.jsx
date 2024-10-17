@@ -2,8 +2,8 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Header from "../components/Header";
 import PestSearch from "../components/PestSearch";
+import pestsData from "../data/pest.json"; // pest information sourced from The Royal Horticultural Society and GrowVeg - links in ReadMe file
 import "../pages/SearchPage.css";
-import pestsData from "../data/pest.json";
 
 /**
  * Component for the Pest page.
