@@ -99,7 +99,7 @@ function Detail() {
                 <div className="detail-content">
                     <div className="plant-main">
                         <img src={image1} alt="Plant image" className="plant-image" />
-                        <h2>Tomato Plant</h2>
+                        <h2>{device.deviceName}</h2>
                     </div>
                     {!currentHealthData && !dataNotFound && <p className="loading">Loading...</p>}
                     {!currentHealthData && dataNotFound && (
