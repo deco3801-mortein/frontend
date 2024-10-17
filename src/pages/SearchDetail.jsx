@@ -6,26 +6,35 @@ import Header from "../components/Header";
 const API_KEY = import.meta.env.VITE_API_KEY;
 
 const SearchDetail = () => {
-    const { id } = useParams(); // Get plant ID from URL
+    const { id } = useParams();
     const [plantData, setPlantData] = useState(null);
+    const [error, setError] = useState(null);
 
     useEffect(() => {
-        // Fetch plant data from API based on plant ID
-        fetch(`https://perenual.com/api/species-list?key=${API_KEY}&q=${id}`)
-            .then((response) => response.json())
-            .then((data) => {
-                if (data.data.length > 0) {
-                    setPlantData(data.data[0]); // Set the first plant result
+        fetch(`https://perenual.com/api/species/details/${id}?key=${API_KEY}`)
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error("Failed to fetch plant data");
                 }
+                return response.json();
             })
-            .catch((error) => console.error("Error fetching plant data:", error));
+            .then((data) => {
+                setPlantData(data);
+            })
+            .catch((error) => {
+                console.error("Error fetching plant data:", error);
+                setError("Failed to load plant details. Please try again.");
+            });
     }, [id]);
 
-    if (!plantData) {
-        return <p>Loading...</p>; // Display loading while fetching
+    if (error) {
+        return <p className="error-message">{error}</p>;
     }
 
-    // Ensure information is an array
+    if (!plantData) {
+        return <p>Loading...</p>;
+    }
+
     const sunlight = Array.isArray(plantData.sunlight)
         ? plantData.sunlight.join(", ")
         : plantData.sunlight || "Unknown";

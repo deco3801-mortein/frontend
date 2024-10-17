@@ -16,7 +16,7 @@ const PlantGrid = (props) => {
                 <PlantItem
                     key={plant.id}
                     id={plant.id}
-                    imageSrc={plantImages[currentImage++ % 3]}
+                    imageSrc={plantImages[currentImage % 3]}
                     name={plant.name}
                 />
             ))}
